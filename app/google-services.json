@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "567412333540",
+    "project_id": "wecure-b57a6",
+    "storage_bucket": "wecure-b57a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567412333540:android:d537be4962c88559db05f1",
+        "android_client_info": {
+          "package_name": "com.wecure.doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567412333540-cicpgqmhu6n3fso1jcntbjpi7ddnpgr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTtY__D0RVKWo0tUvE18cyo9y5A4ZcWDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567412333540-cicpgqmhu6n3fso1jcntbjpi7ddnpgr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
