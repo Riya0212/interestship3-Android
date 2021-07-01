@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/layouthead"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintBottom_toTopOf="@id/layoutbottom"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="55dp"
+            android:layout_margin="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/layouthead"
+            app:layout_constraintTop_toTopOf="@id/layouthead"
+            android:id="@+id/imgProfilePatient"
+            android:src="@drawable/download"
+            app:civ_border_color="@color/blue2"
+            app:civ_border_width="2dp"
+            android:layout_height="55dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_margin="5dp"
+            android:text="@string/txt_patientname"
+            app:layout_constraintTop_toTopOf="parent"
+            android:foregroundGravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/layouthead"
+            android:fontFamily="@font/montbold"
+            app:layout_constraintLeft_toRightOf="@id/imgProfilePatient"
+            android:id="@+id/txtNamePatient"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="0dp"
+    android:id="@+id/layoutbottom"
+    app:layout_constraintTop_toBottomOf="@id/layouthead"
+    android:layout_marginTop="10dp"
+    app:layout_constraintStart_toStartOf="@id/guidelineStart"
+    app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+    android:layout_height="wrap_content">
+  <!--  -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="4dp"
+        card_view:cardCornerRadius="3dp"
+        android:id="@+id/cardContent"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/layoutbottom"
+        app:layout_constraintTop_toBottomOf="@id/layoutbottom"
+        app:layout_constraintLeft_toLeftOf="@id/layoutbottom"
+        android:background="@drawable/card_bg"
+        android:layout_height="wrap_content">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:id="@+id/layoutchildcard"
+           android:layout_height="match_parent">
+           <androidx.constraintlayout.widget.Guideline
+               android:layout_width="wrap_content"
+               android:id="@+id/guidelineGapBetweenComponents"
+               android:orientation="horizontal"
+               app:layout_constraintGuide_begin="7dp"
+               android:layout_height="wrap_content">
+
+           </androidx.constraintlayout.widget.Guideline>
+
+           <androidx.constraintlayout.widget.Guideline
+               android:layout_width="wrap_content"
+               android:id="@+id/guidelinestartinside"
+               android:orientation="vertical"
+               app:layout_constraintGuide_begin="10dp"
+               android:layout_height="wrap_content">
+
+           </androidx.constraintlayout.widget.Guideline>
+           <com.google.android.material.textview.MaterialTextView
+               android:layout_width="0dp"
+               app:layout_constraintTop_toTopOf="@id/guidelineGapBetweenComponents"
+               app:layout_constraintStart_toStartOf="@id/guidelinestartinside"
+               android:layout_height="wrap_content"
+               android:id="@+id/txtdoctors"
+               android:textStyle="bold"
+               android:fontFamily="@font/montbold"
+               android:textColor="@color/blue2"
+               android:textSize="18sp"
+               android:gravity="start"
+               android:text="@string/doctors"
+               >
+
+           </com.google.android.material.textview.MaterialTextView>
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="wrap_content"
+               app:layout_constraintTop_toBottomOf="@id/txtdoctors"
+               android:id="@+id/recyclerDoctors"
+               app:layout_constraintStart_toStartOf="@id/guidelinestartinside"
+               android:layout_height="wrap_content">
+
+           </androidx.recyclerview.widget.RecyclerView>
+           <com.google.android.material.textview.MaterialTextView
+               android:layout_width="wrap_content"
+               app:layout_constraintTop_toBottomOf="@id/recyclerDoctors"
+               android:id="@+id/txtHistory"
+               app:layout_constraintStart_toStartOf="@id/guidelinestartinside"
+               android:layout_height="wrap_content"
+               android:textStyle="bold"
+               android:fontFamily="@font/montbold"
+               android:textColor="@color/blue2"
+               android:textSize="18sp"
+               android:gravity="start"
+               android:text="@string/history">
+
+           </com.google.android.material.textview.MaterialTextView>
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="wrap_content"
+               app:layout_constraintTop_toBottomOf="@id/txtHistory"
+               app:layout_constraintStart_toStartOf="@id/guidelinestartinside"
+               android:layout_height="wrap_content">
+
+           </androidx.recyclerview.widget.RecyclerView>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

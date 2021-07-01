@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".Registration"></activity>
-        <activity android:name=".Login">
+        <activity android:name=".DoctorRecyclerView"></activity>
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/title_activity_home_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

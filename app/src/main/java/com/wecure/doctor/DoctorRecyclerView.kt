@@ -3,9 +3,9 @@ package com.wecure.doctor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Registration : AppCompatActivity() {
+class DoctorRecyclerView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registration)
+        setContentView(R.layout.activity_doctor_recycler_view)
     }
 }

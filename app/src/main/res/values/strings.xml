@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">WecureDoctor</string>
+    <string name="title_activity_home_screen">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="txt_patientname">Hey Sammy</string>
+    <string name="doctors">Doctors</string>
+    <string name="history">History</string>
+    <string name="nameofdoctor">NameOfDoctor</string>
+    <string name="categoryofdoctor">categoryOfDoctor</string>
+    <string name="bookAppointment">Book</string>
 </resources>
