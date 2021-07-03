@@ -45,19 +45,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.8" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98"/>
+        app:layout_constraintGuide_percent="0.98" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineouter"
@@ -77,8 +78,8 @@
         android:id="@+id/relativeLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/login_bg"
         android:layout_marginTop="@dimen/sp_10"
+        android:background="@drawable/login_bg"
         app:layout_constraintBottom_toBottomOf="@id/guidelinebottom"
         app:layout_constraintEnd_toEndOf="@id/guidelineright"
         app:layout_constraintHorizontal_bias="1.0"
@@ -122,6 +123,7 @@
         android:background="@drawable/input_bg"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
+        android:padding="@dimen/sp_10"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewEmail"
@@ -148,6 +150,7 @@
         android:importantForAutofill="no"
         android:includeFontPadding="true"
         android:inputType="textVisiblePassword"
+        android:padding="@dimen/sp_10"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
@@ -202,12 +205,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="@string/label_signup"
+
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textColorHighlight="@color/colorBlack"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintLeft_toRightOf="@+id/textViewNewUser"
         tools:ignore="RtlSymmetry" />
 
     <ImageView
@@ -216,10 +220,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/ic_group_24loginvector"
         android:src="@drawable/ic_group_24loginvector"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineend"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@+id/textViewNewUser"
-        app:layout_constraintBottom_toBottomOf="@+id/guidelineend"
         tools:ignore="ContentDescription" />
 
 
