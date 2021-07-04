@@ -14,7 +14,7 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     android:backgroundTint="@color/blue3"
-    app:cardCornerRadius="@dimen/dp_20"
+    app:cardCornerRadius="@dimen/dp_10"
     app:cardElevation="@dimen/dp_3"
     card_view:cardUseCompatPadding="true"
     app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
     android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        
+
         android:layout_height="wrap_content">
         <androidx.constraintlayout.widget.Guideline
             android:layout_width="wrap_content"
@@ -148,7 +148,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_marginStart="@dimen/dp_20"
         app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
         app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
         app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
