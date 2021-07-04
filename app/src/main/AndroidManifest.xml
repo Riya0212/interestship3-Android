@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".DoctorRecyclerView"></activity>
+        <activity android:name=".HistoryRecyclerView"></activity>
+        <activity android:name=".DoctorRecyclerView" />
         <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen">

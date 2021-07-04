@@ -34,51 +34,7 @@ class HomeScreen : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-
-        if (savedInstanceState == null) {
-            // 2
-            supportFragmentManager
-                // 3
-                .beginTransaction()
-                // 4
-                .add(R.id.nav_host_fragment_container, DogListFragment.newInstance(), "dogList")
-                // 5
-                .commit()
-        }
-
-
-
-
-
-
-        // initRecyclerView()
-         //   addDataSet()
-
-
     }
 
 
-    //finding view
-    //val recyclerView = findViewById<RecyclerView>(R.id.recyclerDoctors)
-    //item decorator to separate the items
-
-
-
-
-
-   /* private fun addDataSet(){
-        val data = DataSource.createDataSet()
-        docAdapter.submitList(data)
-    }
-
-    private fun initRecyclerView(){
-
-        recyclerView.apply {
-            layoutManager = LinearLayoutManager(this@HomeScreen)
-            //val topSpacingDecorator = TopSpacingItemDecoration(30)
-           // addItemDecoration(topSpacingDecorator)
-            docAdapter = DoctorRecyclerAdapter()
-            adapter = docAdapter
-        }*/
-   //// }
 }

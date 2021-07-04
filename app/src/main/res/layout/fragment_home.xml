@@ -11,19 +11,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="10dp" />
+        app:layout_constraintGuide_begin="@dimen/dp_7" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="16dp" />
+        app:layout_constraintGuide_begin="@dimen/dp_10" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="10dp" />
+        app:layout_constraintGuide_end="@dimen/dp_7" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="20dp" />
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp_0"
         android:id="@+id/layouthead"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
@@ -39,21 +39,21 @@
         app:layout_constraintBottom_toTopOf="@id/layoutbottom"
         android:layout_height="wrap_content">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="55dp"
-            android:layout_margin="5dp"
+            android:layout_width="@dimen/dp_60"
+            android:layout_margin="@dimen/dp_5"
             app:layout_constraintLeft_toLeftOf="@id/layouthead"
             app:layout_constraintTop_toTopOf="@id/layouthead"
             android:id="@+id/imgProfilePatient"
             android:src="@drawable/download"
             app:civ_border_color="@color/blue2"
-            app:civ_border_width="2dp"
-            android:layout_height="55dp">
+            app:civ_border_width="@dimen/dp_2"
+            android:layout_height="@dimen/dp_60">
 
         </de.hdodenhof.circleimageview.CircleImageView>
         <TextView
             android:layout_width="wrap_content"
-            android:textSize="16sp"
-            android:layout_margin="5dp"
+            android:textSize="@dimen/sp_16"
+            android:layout_margin="@dimen/dp_5"
             android:text="@string/txt_patientname"
             app:layout_constraintTop_toTopOf="parent"
             android:foregroundGravity="center"
@@ -68,25 +68,25 @@
         </TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="0dp"
+    android:layout_width="@dimen/dp_0"
     android:id="@+id/layoutbottom"
     app:layout_constraintTop_toBottomOf="@id/layouthead"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="@dimen/dp_10"
     app:layout_constraintStart_toStartOf="@id/guidelineStart"
     app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
     android:layout_height="wrap_content">
   <!--  -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         card_view:cardUseCompatPadding="true"
-        card_view:cardElevation="4dp"
-        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="@dimen/dp_4"
+        card_view:cardCornerRadius="@dimen/dp_3"
         android:id="@+id/cardContent"
-        android:layout_marginRight="10dp"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:outlineSpotShadowColor="@color/blue2"
+        android:layout_marginLeft="@dimen/dp_10"
         app:layout_constraintTop_toTopOf="@id/layoutbottom"
         app:layout_constraintTop_toBottomOf="@id/layoutbottom"
         app:layout_constraintLeft_toLeftOf="@id/layoutbottom"
@@ -123,7 +123,7 @@
                android:textStyle="bold"
                android:fontFamily="@font/montbold"
                android:textColor="@color/blue2"
-               android:textSize="18sp"
+               android:textSize="@dimen/sp_18"
                android:gravity="start"
                android:text="@string/doctors"
                >
@@ -146,7 +146,7 @@
                android:textStyle="bold"
                android:fontFamily="@font/montbold"
                android:textColor="@color/blue2"
-               android:textSize="18sp"
+               android:textSize="@dimen/sp_18"
                android:gravity="start"
                android:text="@string/history">
 
