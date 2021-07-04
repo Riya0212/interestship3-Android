@@ -8,7 +8,14 @@ class DataSource{
             val list = ArrayList<DoctorModel>()
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download
+                )
+            )
+            list.add(
+                DoctorModel(
+                    "Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
@@ -71,21 +78,14 @@ class DataSource{
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
-                    "orthopedic",
-                    R.drawable.download
-                )
-            )
-            list.add(
-                DoctorModel(
-                    "Hrishita",
+                    "Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
@@ -113,5 +113,139 @@ class DataSource{
             )
             return list
         }
+
+
+        fun createDataSetHistory(): ArrayList<HistoryModel>{
+            val listHistory = ArrayList<HistoryModel>()
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+            listHistory.add(
+                HistoryModel(
+                    "Hrishita Mavani",
+                    "orthopedic",
+                    R.drawable.download,
+                    "10-05-200"
+                )
+
+            )
+
+            return listHistory
+        }
+
     }
 }

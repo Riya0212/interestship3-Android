@@ -137,6 +137,7 @@
             android:textStyle="bold"
             android:textColor="@color/blue2"
             android:text="Category"
+            android:id="@+id/txtcategoryOfDoctor_history"
             app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
             app:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor_history"
             app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcard"
