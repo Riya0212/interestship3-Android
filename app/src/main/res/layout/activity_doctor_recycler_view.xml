@@ -9,6 +9,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     card_view:cardBackgroundColor="@color/blue3"
+
     card_view:layout_constraintLeft_toLeftOf="parent"
     card_view:layout_constraintTop_toTopOf="parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -19,6 +20,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
 android:paddingBottom="7dp"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10"
     android:id="@+id/layoutChildDoctorCard"
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.Guideline
@@ -26,13 +29,13 @@ android:paddingBottom="7dp"
         android:layout_height="wrap_content"
         android:id="@+id/guidelinecardstart"
         android:orientation="vertical"
-        card_view:layout_constraintGuide_begin="10dp">
+        card_view:layout_constraintGuide_begin="@dimen/dp_5">
 
     </androidx.constraintlayout.widget.Guideline>
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:orientation="horizontal"
-        card_view:layout_constraintGuide_begin="10dp"
+        card_view:layout_constraintGuide_begin="@dimen/dp_10"
         android:id="@+id/guidelinetopcard"
         android:layout_height="wrap_content">
 
@@ -42,13 +45,13 @@ android:paddingBottom="7dp"
         android:layout_height="wrap_content"
         android:id="@+id/guidelinecardend"
         android:orientation="vertical"
-        card_view:layout_constraintGuide_end="10dp">
+        card_view:layout_constraintGuide_end="@dimen/dp_5">
 
     </androidx.constraintlayout.widget.Guideline>
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:orientation="horizontal"
-        card_view:layout_constraintGuide_end="10dp"
+        card_view:layout_constraintGuide_end="@dimen/dp_5"
         android:id="@+id/guidelinebottomcard"
         android:layout_height="wrap_content">
 
@@ -74,8 +77,11 @@ android:paddingBottom="7dp"
         android:id="@+id/txtNameOfDoctor"
         android:textStyle="bold"
         card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
-        android:padding="@dimen/dp_2"
+        android:paddingEnd="@dimen/dp_5"
         android:textSize="@dimen/sp_14"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
         android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -87,7 +93,9 @@ android:paddingBottom="7dp"
         card_view:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor"
         android:textStyle="bold"
         android:textSize="@dimen/sp_12"
-        android:padding="@dimen/dp_2"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_2"
         android:textColor="@color/blue2"
         card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
         android:id="@+id/txtcategoryOfDoctor"
@@ -98,7 +106,7 @@ android:paddingBottom="7dp"
 
     </com.google.android.material.textview.MaterialTextView>
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:text="@string/bookAppointment"
         android:backgroundTint="@color/blue2"
 android:textColor="@color/white"
@@ -106,12 +114,15 @@ android:textColor="@color/white"
         android:textStyle="bold"
         android:background="@drawable/rounded_corner_button"
         android:textSize="@dimen/sp_12"
+        android:paddingStart="@dimen/dp_7"
+        android:paddingEnd="@dimen/dp_7"
+        card_view:layout_constraintBottom_toTopOf="@id/guidelinebottomcard"
         card_view:layout_constraintTop_toBottomOf="@+id/txtcategoryOfDoctor"
         card_view:layout_constraintStart_toStartOf="@id/guidelinecardstart"
         card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
         android:layout_marginTop="@dimen/dp_7"
-        android:layout_marginBottom="@dimen/dp_10"
-        android:layout_height="@dimen/dp_0">
+
+        android:layout_height="@dimen/dp_30">
 
     </androidx.appcompat.widget.AppCompatButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

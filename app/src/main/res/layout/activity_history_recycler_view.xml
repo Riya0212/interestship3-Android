@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:id="@+id/layoutcontainerhistory"
     android:layout_height="wrap_content"
     tools:context=".HistoryRecyclerView">
 
 
 <com.google.android.material.card.MaterialCardView
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     android:backgroundTint="@color/blue3"
@@ -22,7 +22,7 @@
     android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-
+        
         android:layout_height="wrap_content">
         <androidx.constraintlayout.widget.Guideline
             android:layout_width="wrap_content"
@@ -58,8 +58,8 @@
         </androidx.constraintlayout.widget.Guideline>
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="@dimen/dp_60"
+        android:padding="@dimen/dp_3"
         android:src="@drawable/download"
-         android:padding="@dimen/dp_5"
         app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
         app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
         app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
@@ -70,11 +70,9 @@
     </de.hdodenhof.circleimageview.CircleImageView>
 
    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
        android:layout_marginStart="@dimen/dp_10"
        android:layout_marginEnd="@dimen/dp_20"
-       android:paddingEnd="@dimen/dp_20"
-       android:paddingStart="@dimen/dp_10"
         app:layout_constraintStart_toEndOf="@id/imgdoctorphoto_history"
         app:layout_constraintEnd_toStartOf="@id/layoutdoctordate"
         app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
@@ -121,7 +119,7 @@
             android:id="@+id/txtNameOfDoctor_history"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_12"
             android:paddingRight="@dimen/dp_20"
             android:paddingStart="@dimen/dp_10"
             app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
@@ -142,9 +140,9 @@
             app:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor_history"
             app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcard"
             app:layout_constraintStart_toStartOf="@id/layoutdoctordetails"
-            android:textSize="@dimen/sp_14"
+            android:textSize="@dimen/sp_10"
             android:paddingRight="@dimen/dp_10"
-            android:fontFamily="@font/poppinssemibold"
+            android:fontFamily="@font/poppinsregular"
             android:layout_height="wrap_content">
         </com.google.android.material.textview.MaterialTextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -206,6 +204,8 @@
             app:layout_constraintTop_toBottomOf="@id/imgdate_history"
             app:layout_constraintBottom_toBottomOf="@id/layoutdoctordate"
             android:text="10-05-2021"
+            android:textSize="@dimen/dp_10"
+            android:textColor="@color/blue2"
             app:layout_constraintEnd_toEndOf="@id/guidelinecardendhistory"
             app:layout_constraintStart_toStartOf="@id/guidelinecardstarthistory"
             android:layout_height="wrap_content">

@@ -8,105 +8,105 @@ class DataSource{
             val list = ArrayList<DoctorModel>()
             list.add(
                 DoctorModel(
-                    "Hrishita Mavani",
+                    "1-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita Mavani",
+                    "2-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "3-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "4-Hrishita",
+                    "orthopedic surgeon",
+                    R.drawable.download
+                )
+            )
+            list.add(
+                DoctorModel(
+                    "5- Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "6- Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "7- Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "8-Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "8- Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "9-Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "10-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita Mavani",
+                    "11- Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita Mavani",
+                    "12-Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
+                    "13-Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "Hrishita",
-                    "orthopedic",
-                    R.drawable.download
-                )
-            )
-            list.add(
-                DoctorModel(
-                    "Hrishita",
+                    "14-Hrishita",
                     "orthopedic",
                     R.drawable.download
                 )
@@ -119,7 +119,7 @@ class DataSource{
             val listHistory = ArrayList<HistoryModel>()
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "1-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -128,7 +128,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "2-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -137,7 +137,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "3-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -146,7 +146,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "4-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -155,7 +155,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "5-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -164,7 +164,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "6-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -173,7 +173,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "7-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -182,7 +182,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "8-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -191,7 +191,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "9-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -200,7 +200,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "10-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -209,7 +209,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "11-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -218,7 +218,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "12-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -227,7 +227,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "13-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -236,7 +236,7 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "Hrishita Mavani",
+                    "14-Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"

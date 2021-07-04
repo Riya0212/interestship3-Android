@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="20dp" />
+        app:layout_constraintGuide_end="@dimen/dp_20" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/dp_0"
         android:id="@+id/layouthead"
@@ -39,24 +39,23 @@
         app:layout_constraintBottom_toTopOf="@id/layoutbottom"
         android:layout_height="wrap_content">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="@dimen/dp_60"
-            android:layout_margin="@dimen/dp_5"
+            android:layout_width="@dimen/dp_70"
+            android:padding="@dimen/dp_4"
             app:layout_constraintLeft_toLeftOf="@id/layouthead"
             app:layout_constraintTop_toTopOf="@id/layouthead"
             android:id="@+id/imgProfilePatient"
             android:src="@drawable/download"
             app:civ_border_color="@color/blue2"
             app:civ_border_width="@dimen/dp_2"
-            android:layout_height="@dimen/dp_60">
+            android:layout_height="@dimen/dp_70">
 
         </de.hdodenhof.circleimageview.CircleImageView>
         <TextView
             android:layout_width="wrap_content"
-            android:textSize="@dimen/sp_16"
+            android:textSize="@dimen/sp_18"
             android:layout_margin="@dimen/dp_5"
             android:text="@string/txt_patientname"
             app:layout_constraintTop_toTopOf="parent"
-            android:foregroundGravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/layouthead"
@@ -70,38 +69,62 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="@dimen/dp_0"
     android:id="@+id/layoutbottom"
+    android:paddingBottom="@dimen/dp_80"
+
     app:layout_constraintTop_toBottomOf="@id/layouthead"
-    android:layout_marginTop="@dimen/dp_10"
     app:layout_constraintStart_toStartOf="@id/guidelineStart"
     app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
     android:layout_height="wrap_content">
-  <!--  -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/dp_5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottominner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp_0"
+        android:padding="@dimen/dp_7"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         card_view:cardUseCompatPadding="true"
-        card_view:cardElevation="@dimen/dp_4"
-        card_view:cardCornerRadius="@dimen/dp_3"
+        card_view:cardElevation="@dimen/dp_5"
+        card_view:cardCornerRadius="@dimen/dp_5"
         android:id="@+id/cardContent"
-        android:layout_marginRight="@dimen/dp_10"
-        android:padding="@dimen/dp_10"
+        card_view:layout_constraintEnd_toEndOf="@id/layoutbottom"
+        card_view:layout_constraintStart_toStartOf="@id/layoutbottom"
         android:outlineSpotShadowColor="@color/blue2"
-        android:layout_marginLeft="@dimen/dp_10"
-        app:layout_constraintTop_toTopOf="@id/layoutbottom"
-        app:layout_constraintTop_toBottomOf="@id/layoutbottom"
-        app:layout_constraintLeft_toLeftOf="@id/layoutbottom"
+        app:layout_constraintTop_toTopOf="@id/guidelineTopinner"
+        app:layout_constraintTop_toBottomOf="@id/guidelineBottominner"
         android:background="@drawable/card_bg"
         android:layout_height="wrap_content">
 
        <androidx.constraintlayout.widget.ConstraintLayout
-           android:layout_width="match_parent"
+           android:layout_width="wrap_content"
            android:id="@+id/layoutchildcard"
-           android:layout_height="match_parent">
+           android:layout_height="wrap_content">
            <androidx.constraintlayout.widget.Guideline
                android:layout_width="wrap_content"
                android:id="@+id/guidelineGapBetweenComponents"
                android:orientation="horizontal"
-               app:layout_constraintGuide_begin="7dp"
+               app:layout_constraintGuide_begin="@dimen/dp_7"
                android:layout_height="wrap_content">
 
            </androidx.constraintlayout.widget.Guideline>
@@ -110,9 +133,14 @@
                android:layout_width="wrap_content"
                android:id="@+id/guidelinestartinside"
                android:orientation="vertical"
-               app:layout_constraintGuide_begin="10dp"
+               app:layout_constraintGuide_begin="@dimen/dp_7"
+               android:layout_height="wrap_content" />
+           <androidx.constraintlayout.widget.Guideline
+               android:layout_width="wrap_content"
+               android:id="@+id/guidelineendinside"
+               android:orientation="vertical"
+               app:layout_constraintGuide_end="@dimen/dp_7"
                android:layout_height="wrap_content">
-
            </androidx.constraintlayout.widget.Guideline>
            <com.google.android.material.textview.MaterialTextView
                android:layout_width="0dp"
@@ -133,6 +161,9 @@
                android:layout_width="wrap_content"
                app:layout_constraintTop_toBottomOf="@id/txtdoctors"
                android:id="@+id/recyclerDoctors"
+               android:paddingEnd="@dimen/dp_7"
+               android:paddingStart="@dimen/dp_7"
+               card_view:layout_constraintEnd_toEndOf="@id/guidelineendinside"
                app:layout_constraintStart_toStartOf="@id/guidelinestartinside"
                android:layout_height="wrap_content">
 
@@ -153,6 +184,10 @@
            </com.google.android.material.textview.MaterialTextView>
            <androidx.recyclerview.widget.RecyclerView
                android:layout_width="wrap_content"
+               android:id="@+id/recyclerHistory"
+               android:paddingEnd="@dimen/dp_7"
+               android:layout_marginBottom="@dimen/dp_80"
+               card_view:layout_constraintEnd_toEndOf="@id/guidelineendinside"
                app:layout_constraintTop_toBottomOf="@id/txtHistory"
                app:layout_constraintStart_toStartOf="@id/guidelinestartinside"
                android:layout_height="wrap_content">

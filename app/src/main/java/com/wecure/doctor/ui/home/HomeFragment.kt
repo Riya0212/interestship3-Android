@@ -48,11 +48,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(itemView, savedInstanceState)
 
         postToList()
+        postToListHistory()
         recyclerDoctors.layoutManager= LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
         recyclerDoctors.adapter = DoctorRecyclerAdapter(nameList,categoryList,profileList)
 
-        recyclerDoctors.layoutManager= LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
-        recyclerDoctors.adapter = HistoryRecyclerAdapter(nameListHistory,categoryListHistory,profileListHistory,dateListHistory)
+        recyclerHistory.layoutManager= LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
+        recyclerHistory.adapter = HistoryRecyclerAdapter(nameListHistory,categoryListHistory,profileListHistory,dateListHistory)
     }
 
 
@@ -70,21 +71,21 @@ private fun addToList(name:String,category:String,proile:Int){
 
 }
 private fun postToList(){
-    for( i in 0 until data.size-1){
+    for( i in 0 until data.size){
         addToList(data[i].name,data[i].desc,data[i].image)
     }
 }
 
     private fun addToListHistory(namehist:String,categoryhist:String,proilehist:Int,datehist:String){
 
-        nameList.add(namehist)
-        categoryList.add(categoryhist)
-        profileList.add(proilehist)
+        nameListHistory.add(namehist)
+        categoryListHistory.add(categoryhist)
+        profileListHistory.add(proilehist)
         dateListHistory.add(datehist)
 
     }
     private fun postToListHistory(){
-        for( i in 0 until data.size-1){
+        for( i in 0 until dataHistory.size){
             addToListHistory(dataHistory[i].name,dataHistory[i].category,dataHistory[i].image,dataHistory[i].date)
         }
     }
