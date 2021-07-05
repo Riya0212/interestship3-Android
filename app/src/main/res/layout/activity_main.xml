@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
         android:background="@drawable/ic_group_25logo"
         android:src="@drawable/ic_group_25logo"
         app:layout_constraintDimensionRatio="1:1"
@@ -89,11 +89,11 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewmess"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="@dimen/sp_30"
         android:text="@string/label_login_using_email_and_password"
         android:textColor="@color/colorDarkBlue"
         android:textSize="@dimen/sp_17"
@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo"
         app:layout_constraintTop_toTopOf="@+id/guidelineinner" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,25 +111,34 @@
         android:text="@string/label_email"
         android:textColor="@color/colorDarkBlue"
         android:textColorHighlight="@color/colorDarkBlue"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_20"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewmess" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
         android:layout_width="0dp"
-        android:layout_height="@dimen/dp_40"
-        android:background="@drawable/input_bg"
+        android:layout_height="@dimen/dp_32"
         android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
-        android:padding="@dimen/sp_10"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewEmail"
-        tools:ignore="LabelFor" />
+        app:startIconContentDescription="">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            android:background="@drawable/input_bg"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/sp_2"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,52 +149,63 @@
         android:textSize="@dimen/sp_20"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
-        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@id/emailLayout" />
 
-    <EditText
-        android:id="@+id/editTextPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
         android:layout_width="0dp"
-        android:layout_height="@dimen/dp_40"
-        android:background="@drawable/input_bg"
+        android:layout_height="@dimen/dp_32"
         android:importantForAutofill="no"
-        android:includeFontPadding="true"
-        android:inputType="textVisiblePassword"
-        android:padding="@dimen/sp_10"
-        android:textColor="@color/colorBlack"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewPassword"
-        tools:ignore="LabelFor" />
+        app:passwordToggleEnabled="true">
 
-    <TextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            android:inputType="textVisiblePassword"
+            android:background="@drawable/input_bg"
+            android:padding="@dimen/sp_2"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/textViewPassword"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewForgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_6"
+        android:autoLink="web"
         android:text="@string/label_forgot_password"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_17"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_20"
         android:background="@drawable/loginbtn_bg"
+        android:enabled="false"
         android:text="@string/label_login"
         android:textColor="@color/colorWhite"
         android:textColorHighlight="@color/colorWhite"
         android:textSize="@dimen/sp_18"
+        app:backgroundTint="@color/colorDarkBlue"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewForgot" />
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewNewUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -199,22 +219,22 @@
 
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/dp_12"
         android:text="@string/label_signup"
 
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textColorHighlight="@color/colorBlack"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintLeft_toRightOf="@+id/textViewNewUser"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         tools:ignore="RtlSymmetry" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

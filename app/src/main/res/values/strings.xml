@@ -17,4 +17,6 @@
     <string name="label_new_account">New account</string>
     <string name="app_name">WE CURE</string>
     <string name="don_t_have_an_account" tools:ignore="StringEscaping">Dont have an account?</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="label_length">Password minimum length should be 8</string>
 </resources>
