@@ -1,6 +1,12 @@
 package com.wecure.doctor
 
+import android.media.Image
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.ImageView
+import android.widget.PopupMenu
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -18,11 +24,11 @@ import com.wecure.doctor.ui.home.HomeFragment
 class HomeScreen : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeScreenBinding
- //  private  lateinit var docAdapter: DoctorRecyclerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
+
         binding = ActivityHomeScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val homefragment = HomeFragment()
@@ -42,16 +48,19 @@ class HomeScreen : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         navView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.navigation_home -> makecurrentfragment(homefragment)
                 R.id.navigation_profile -> makecurrentfragment(proflefragment)
             }
             true
         }
-    }
-private fun makecurrentfragment(fragment: Fragment)= supportFragmentManager.beginTransaction().apply {
-    replace(R.id.nav_host_fragment_activity_home_screen,fragment)
-    commit()
-}
 
+
+    }
+
+    private fun makecurrentfragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.nav_host_fragment_activity_home_screen, fragment)
+            commit()
+        }
 }

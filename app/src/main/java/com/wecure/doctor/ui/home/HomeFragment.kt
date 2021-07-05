@@ -1,15 +1,10 @@
 package com.wecure.doctor.ui.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.HorizontalScrollView
-import android.widget.TextView
+import android.view.*
+import android.widget.*
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wecure.doctor.DataSource
@@ -18,6 +13,8 @@ import com.wecure.doctor.HistoryRecyclerAdapter
 import com.wecure.doctor.R
 import com.wecure.doctor.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
+import java.lang.Exception
 
 class HomeFragment : Fragment() {
 
@@ -29,7 +26,6 @@ class HomeFragment : Fragment() {
     private var profileListHistory = mutableListOf<Int>()
     private var dateListHistory = mutableListOf<String>()
     private var _binding: FragmentHomeBinding? = null
-
     private val data = DataSource.createDataSet()
     private val dataHistory = DataSource.createDataSetHistory()
     // This property is only valid between onCreateView and
@@ -41,13 +37,51 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
+        val imgsetting:ImageView = itemView.findViewById(R.id.imgsettings)!!
 
-        postToList()
+        val popupMenu =PopupMenu(context,imgsetting)
+
+        popupMenu.inflate(R.menu.top_bar_menu)
+        popupMenu.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.action_contact_us ->{
+                    true
+                }
+                R.id.action_exit ->{
+                    true
+                }
+                else ->{
+                    true
+                }
+            }
+
+        }
+
+
+    imgsetting.setOnClickListener{
+            try{
+                val popup= PopupMenu::class.java.getDeclaredField("mPopup")
+                popup.isAccessible = true
+                val menu =popup.get(popupMenu)
+                menu.javaClass.getDeclaredMethod("setForceShowIcon",Boolean::class.java)
+                    .invoke(menu,true)
+                true
+            }catch (e:Exception){
+                e.printStackTrace()
+            }
+            finally {
+                popupMenu.show()
+            }
+
+        }
+    postToList()
         postToListHistory()
         recyclerDoctors.layoutManager= LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
         recyclerDoctors.adapter = DoctorRecyclerAdapter(nameList,categoryList,profileList)
@@ -63,6 +97,9 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+private fun popUpMenu(){
+
+}
 private fun addToList(name:String,category:String,proile:Int){
 
     nameList.add(name)

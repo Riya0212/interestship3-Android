@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:id="@+id/layoutcontainerhistory"
     android:layout_height="wrap_content"
     tools:context=".HistoryRecyclerView">
@@ -14,7 +14,7 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     android:backgroundTint="@color/blue3"
-    app:cardCornerRadius="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_7"
     app:cardElevation="@dimen/dp_3"
     card_view:cardUseCompatPadding="true"
     app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +85,7 @@
            android:layout_height="wrap_content"
            android:id="@+id/guidelinecardstart"
            android:orientation="vertical"
-           card_view:layout_constraintGuide_begin="@dimen/dp_7">
+           card_view:layout_constraintGuide_begin="@dimen/dp_3">
 
        </androidx.constraintlayout.widget.Guideline>
        <androidx.constraintlayout.widget.Guideline
@@ -107,7 +107,7 @@
        <androidx.constraintlayout.widget.Guideline
            android:layout_width="wrap_content"
            android:orientation="horizontal"
-           card_view:layout_constraintGuide_end="@dimen/dp_7"
+           card_view:layout_constraintGuide_end="@dimen/dp_3"
            android:id="@+id/guidelinebottomcard"
            android:layout_height="wrap_content">
 
@@ -115,12 +115,12 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
-            android:text="Name"
+            android:text="@string/name"
             android:id="@+id/txtNameOfDoctor_history"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_12"
-            android:paddingRight="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
             android:paddingStart="@dimen/dp_10"
             app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
             android:fontFamily="@font/poppinssemibold"
@@ -134,14 +134,15 @@
             android:layout_width="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/blue2"
-            android:text="Category"
+            android:text="@string/category"
             android:id="@+id/txtcategoryOfDoctor_history"
             app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
             app:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor_history"
             app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcard"
             app:layout_constraintStart_toStartOf="@id/layoutdoctordetails"
             android:textSize="@dimen/sp_10"
-            android:paddingRight="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_0"
+            android:paddingEnd="@dimen/dp_10"
             android:fontFamily="@font/poppinsregular"
             android:layout_height="wrap_content">
         </com.google.android.material.textview.MaterialTextView>
@@ -202,7 +203,7 @@
             android:id="@+id/txtdate_history"
             app:layout_constraintTop_toBottomOf="@id/imgdate_history"
             app:layout_constraintBottom_toBottomOf="@id/layoutdoctordate"
-            android:text="10-05-2021"
+            android:text="@string/date"
             android:textSize="@dimen/dp_10"
             android:textColor="@color/blue2"
             app:layout_constraintEnd_toEndOf="@id/guidelinecardendhistory"

@@ -17,4 +17,10 @@
     <string name="backgroundimage">backgroundimage</string>
     <string name="our_team_will_contact_you_soon">our team will contact you soon</string>
     <string name="countrycode_contactus">+91</string>
+    <string name="contact_us">contact us</string>
+    <string name="share">share</string>
+    <string name="logout">logout</string>
+    <string name="name">Name</string>
+    <string name="date">10-05-2021</string>
+    <string name="category">Category</string>
 </resources>
