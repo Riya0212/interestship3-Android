@@ -37,14 +37,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val v:View=inflater.inflate(R.layout.fragment_home, container, false)
 
-
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return v
     }
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-        val imgsetting:ImageView = itemView.findViewById(R.id.imgsettings)!!
+        val imgsetting:ImageView = itemView?.findViewById(R.id.imgsettings)!!
 
         val popupMenu =PopupMenu(context,imgsetting)
 
