@@ -9,4 +9,12 @@
     <string name="nameofdoctor">NameOfDoctor</string>
     <string name="categoryofdoctor">categoryOfDoctor</string>
     <string name="bookAppointment">Book</string>
+    <string name="contact_us_email">Email</string>
+    <string name="contactus_submit">Submit</string>
+    <string name="text_contact_us">CONTACT US</string>
+    <string name="name_contact_us">Name</string>
+    <string name="phone_number_contactus">Phone Number</string>
+    <string name="backgroundimage">backgroundimage</string>
+    <string name="our_team_will_contact_you_soon">our team will contact you soon</string>
+    <string name="countrycode_contactus">+91</string>
 </resources>

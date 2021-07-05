@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectgradient"
+    android:id="@+id/layoutContactusContainer"
+    tools:context=".ContactUs">
+    <ImageView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:translationZ="-1dp"
+        android:alpha="0.7"
+        android:id="@+id/waveTop"
+        android:translationY="@dimen/dp_80"
+        android:background="@drawable/wave1"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/backgroundimage">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/wave2"
+        android:id="@+id/waveBottom"
+        android:translationY="30dp"
+        android:alpha="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationZ="-1dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/backgroundimage">
+
+    </ImageView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:id="@+id/guidelinebottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_10"
+        android:id="@+id/guidelineend"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        app:layout_constraintGuide_begin="@dimen/dp_10"
+        android:orientation="vertical"
+        android:id="@+id/guidelinestart"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+<androidx.constraintlayout.widget.Guideline
+    android:layout_width="wrap_content"
+    app:layout_constraintGuide_begin="@dimen/dp_45"
+    android:orientation="horizontal"
+    android:id="@+id/guidelinetop"
+    android:layout_height="wrap_content">
+
+</androidx.constraintlayout.widget.Guideline>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dp_0"
+        android:id="@+id/layoutcontaintercontactus"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_25"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="@id/guidelinetop"
+        app:layout_constraintStart_toStartOf="@id/guidelinestart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineend"
+
+        android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/text_contact_us"
+
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="@dimen/sp_20"
+        android:id="@+id/txtcontactus"
+        app:layout_constraintTop_toTopOf="@id/layoutcontaintercontactus"
+        app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
+        app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/edtname"
+            android:paddingStart="@dimen/dp_5"
+            android:textSize="@dimen/sp_14"
+            android:paddingEnd="@dimen/dp_5"
+            android:fontFamily="@font/poppinsregular"
+            android:background="@drawable/edt_background"
+            android:layout_margin="@dimen/dp_7"
+            android:textStyle="bold"
+            android:hint="@string/name_contact_us"
+            app:startIconDrawable="@drawable/ic_baseline_person_24"
+            android:textColorHint="@color/blue3"
+            android:elevation="@dimen/dp_5"
+            app:hintAnimationEnabled="true"
+            app:startIconTint="@color/blue2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            app:layout_constraintTop_toBottomOf="@id/txtcontactus"
+            app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
+            app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
+            app:layout_constraintBottom_toTopOf="@id/edtemail"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/blue2"
+                android:inputType="text"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:startIconTint="@color/blue2"
+            android:textSize="@dimen/sp_14"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+
+            android:hint="@string/contact_us_email"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_margin="@dimen/dp_7"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            android:id="@+id/edtemail"
+            android:background="@drawable/edt_background"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:textColorHint="@color/blue3"
+            android:elevation="@dimen/dp_5"
+
+            app:layout_constraintBottom_toTopOf="@id/edthphonenumber"
+            app:layout_constraintTop_toBottomOf="@id/edtname"
+            app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
+            app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/blue2"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edthphonenumber"
+            app:layout_constraintTop_toBottomOf="@id/edtemail"
+            app:layout_constraintBottom_toTopOf="@id/btnsubmit"
+            app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+            android:textSize="@dimen/sp_14"
+            android:background="@drawable/edt_background"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_margin="@dimen/dp_7"
+            android:textStyle="bold"
+            android:hint="@string/phone_number_contactus"
+            app:startIconTint="@color/blue2"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+
+            android:elevation="@dimen/dp_5"
+            android:textColorHint="@color/blue3"
+            app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
+
+                android:textColor="@color/blue2"
+                app:prefixText="@string/countrycode_contactus"
+                android:textSize="@dimen/sp_14"
+                android:inputType="phone"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btnsubmit"
+            android:paddingStart="@dimen/dp_45"
+            android:paddingEnd="@dimen/dp_45"
+            app:startIconTint="@color/blue2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_margin="@dimen/dp_10"
+            android:textSize="@dimen/sp_14"
+            android:text="@string/contactus_submit"
+            app:layout_constraintTop_toBottomOf="@id/edthphonenumber"
+            app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
+            app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
+            app:layout_constraintBottom_toTopOf="@id/txtendtext"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_corner_button"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.AppCompatButton>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/txtendtext"
+            app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
+            app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
+            android:layout_marginTop="@dimen/dp_10"
+            app:fontFamily="@font/poppinsregular"
+            android:textStyle="bold"
+            android:textColor="@color/blue2"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintTop_toBottomOf="@id/btnsubmit"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/our_team_will_contact_you_soon"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
