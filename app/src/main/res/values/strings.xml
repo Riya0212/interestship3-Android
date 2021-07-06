@@ -23,4 +23,8 @@
     <string name="name">Name</string>
     <string name="date">10-05-2021</string>
     <string name="category">Category</string>
+    <string name="settingsimage">settingsImage</string>
+    <string name="hrishita_mavani">Hrishita Mavani</string>
+    <string name="yash_raj_sharma_dummy_name">Yash Raj Sharma</string>
+    <string name="dr_hrishita_mavani_doctor_name">Dr. Hrishita Mavani</string>
 </resources>

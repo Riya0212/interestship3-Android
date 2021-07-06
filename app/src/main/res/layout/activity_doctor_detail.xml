@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".DoctorDetail">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_400"
+        android:translationY="-230dp"
+        android:src="@drawable/rectangle"
+        android:id="@+id/img_background"
+        android:translationZ="-1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user_profile"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:elevation="@dimen/dp_4"
+        android:src="@drawable/ellipsesampleimage2"
+        app:civ_border_color="@color/blue2"
+        app:civ_border_width="@dimen/dp_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+<com.google.android.material.textview.MaterialTextView
+    android:layout_width="wrap_content"
+    android:text="@string/dr_hrishita_mavani_doctor_name"
+    android:fontFamily="@font/poppinsbold"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:textSize="@dimen/sp_20"
+    android:id="@+id/txt_doctorName"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/img_user_profile"
+    android:layout_marginTop="@dimen/dp_3"
+    android:layout_height="wrap_content">
+
+</com.google.android.material.textview.MaterialTextView>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_doctorName"
+        android:layout_height="wrap_content">
+
+    </RatingBar>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
