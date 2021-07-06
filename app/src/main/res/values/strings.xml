@@ -27,4 +27,8 @@
     <string name="hrishita_mavani">Hrishita Mavani</string>
     <string name="yash_raj_sharma_dummy_name">Yash Raj Sharma</string>
     <string name="dr_hrishita_mavani_doctor_name">Dr. Hrishita Mavani</string>
+    <string name="introduction">Introduction</string>
+    <string name="dummy_intro">What is Lorem Ipsum Lorem Ipsum fdksjkfjkdsfjdsfkdsksdkjnskgnsdkgnksdngkdsngksjgnkdsnjksfnksgksgkfdngjdfbgjsfbjsfbjsbjfbjsbjsfb is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</string>
+    <string name="experience_detail">15</string>
+    <string name="years_of_experience">Years of Experience</string>
 </resources>
