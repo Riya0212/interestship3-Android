@@ -31,4 +31,8 @@
     <string name="dummy_intro">What is Lorem Ipsum Lorem Ipsum fdksjkfjkdsfjdsfkdsksdkjnskgnsdkgnksdngkdsngksjgnkdsnjksfnksgksgkfdngjdfbgjsfbjsfbjsbjfbjsbjsfb is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</string>
     <string name="experience_detail">15</string>
     <string name="years_of_experience">Years of Experience</string>
+    <string name="appointment">Appointment</string>
+    <string name="select_date">Select Date</string>
+    <string name="mention_your_problem">Mention your Problem</string>
+    <string name="share_your_details_with_doctor">share your details with doctor</string>
 </resources>
