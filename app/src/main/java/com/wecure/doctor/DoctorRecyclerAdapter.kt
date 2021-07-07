@@ -1,10 +1,12 @@
 package com.wecure.doctor
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -17,6 +19,8 @@ class DoctorRecyclerAdapter(private var name:List<String>,private var category:L
         val itemname: TextView = itemView.findViewById(R.id.txtNameOfDoctor)!!
         val itemcategory: TextView = itemView.findViewById(R.id.txtcategoryOfDoctor)!!
         val itemprofile: ImageView = itemView.findViewById(R.id.imgdoctorphoto)!!
+        val itembtn:AppCompatButton =itemView.findViewById(R.id.btn_book_homescreen)!!
+
 
 
         init {
@@ -40,6 +44,12 @@ class DoctorRecyclerAdapter(private var name:List<String>,private var category:L
         holder.itemname.text = name[position]
         holder.itemcategory.text=category[position]
         holder.itemprofile.setImageResource(profile[position])
+        val context=holder.itembtn.context
+        holder.itembtn.setOnClickListener {
+            val intent = Intent( context, DoctorDetail::class.java)
+            context.startActivity(intent)
+        }
+
     }
 
 

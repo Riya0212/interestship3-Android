@@ -116,7 +116,7 @@ android:textColor="@color/white"
         card_view:layout_constraintStart_toStartOf="@id/guidelinecardstart"
         card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
         android:layout_marginTop="@dimen/dp_7"
-
+        android:id="@+id/btn_book_homescreen"
         android:layout_height="@dimen/dp_30">
 
     </androidx.appcompat.widget.AppCompatButton>

@@ -1,16 +1,15 @@
 package com.wecure.doctor.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.*
+import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.wecure.doctor.DataSource
-import com.wecure.doctor.DoctorRecyclerAdapter
-import com.wecure.doctor.HistoryRecyclerAdapter
-import com.wecure.doctor.R
+import com.wecure.doctor.*
 import com.wecure.doctor.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -45,13 +44,14 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
         val imgsetting:ImageView = itemView?.findViewById(R.id.imgsettings)!!
-
         val popupMenu =PopupMenu(context,imgsetting)
 
         popupMenu.inflate(R.menu.top_bar_menu)
         popupMenu.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.action_contact_us ->{
+                    val intent = Intent (getActivity(), ContactUs::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.action_exit ->{

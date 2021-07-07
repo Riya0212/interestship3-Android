@@ -8,5 +8,6 @@ class userProfile : AppCompatActivity() {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
+        supportActionBar?.hide()
     }
 }
