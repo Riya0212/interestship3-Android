@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".SplashScreen">            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".Appointment" />
         <activity android:name=".DoctorDetail">
 
@@ -24,11 +28,7 @@
         <activity android:name=".userProfile" />
         <activity android:name=".forgetPassword_activity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".registrationActivity" />
 
