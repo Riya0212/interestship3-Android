@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCureLoginActivity"
         tools:ignore="AllowBackup">
-        <activity
-            android:name=".FieldValidator"
-            android:label="@string/title_activity_field_validator"
-            android:theme="@style/Theme.WeCureLoginActivity.NoActionBar"></activity>
+
         <activity android:name=".userProfile" />
         <activity android:name=".forgetPassword_activity" />
         <activity android:name=".MainActivity">
