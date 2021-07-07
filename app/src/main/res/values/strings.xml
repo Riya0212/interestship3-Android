@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">WecureDoctor</string>
     <string name="title_activity_home_screen">MainActivity</string>
     <string name="title_home">Home</string>
@@ -35,4 +35,40 @@
     <string name="select_date">Select Date</string>
     <string name="mention_your_problem">Mention your Problem</string>
     <string name="share_your_details_with_doctor">share your details with doctor</string>
+
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_forgot_password">Forgot Password?</string>
+    <string name="label_login">LOGIN</string>
+
+    <string name="label_signup">Signup</string>
+    <string name="label_signup_using_your_details">Signup using your details</string>
+    <string name="label_name">Name</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="label_email1">Email</string>
+    <string name="label_password1">Password</string>
+    <string name="label_signup1">Signup</string>
+    <string name="label_already_have_an_account">Already have an account?</string>
+    <string name="label_login_using_email_and_password">Login using email and password</string>
+    <string name="label_new_account">New account</string>
+
+    <string name="don_t_have_an_account" tools:ignore="StringEscaping">Dont have an account?</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="label_length">Password minimum length should be 8</string>
+    <string name="label_enter_your_email_address_to_reset_your_password">Enter your Email address to reset your password.</string>
+    <string name="label_go_back_to_login">Go Back to Login</string>
+    <string name="label_yash_raj_sharma">Yash Raj Sharma</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_blood_group">Blood Group</string>
+    <string name="label_weight">Weight</string>
+    <string name="label_height">Height</string>
+    <string name="title_activity_field_validator">FieldValidator</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
