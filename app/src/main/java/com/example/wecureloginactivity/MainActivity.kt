@@ -38,9 +38,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.btnLogin.setOnClickListener {
+
             if(isValidate()) {
                 Toast.makeText(this,"validated",Toast.LENGTH_SHORT).show()
             }
+        }
+        binding.textViewForgot.setOnClickListener{
+            val intent= Intent(this,forgetPassword_activity::class.java)
+            startActivity(intent)
         }
 
     }
@@ -55,11 +60,11 @@ class MainActivity : AppCompatActivity() {
 //validation check for username
     private fun validateEmail(): Boolean {
         if (binding.editTextEmail.text.toString().trim().isEmpty()) {
-            binding.emailLayout.error = "Required Field!"
+            binding.editTextEmail.error = "Required Field!"
             binding.editTextEmail.requestFocus()
             return false
         } else if (!isValidEmail(binding.editTextEmail.text.toString())) {
-            binding.emailLayout.error = "Invalid Email!"
+            binding.editTextEmail.error = "Invalid Email!"
             binding.editTextEmail.requestFocus()
             return false
         } else {
@@ -70,28 +75,11 @@ class MainActivity : AppCompatActivity() {
 //validation check for password
     private fun validatePassword(): Boolean{
         if(binding.editTextPassword.text.toString().trim().isEmpty()){
-            binding.passwordLayout.error="Required Field!"
+            binding.editTextPassword.error="Required Field!"
             binding.editTextPassword.requestFocus()
             return false
         }
-        else if(binding.editTextPassword.text.toString().length<8){
-            binding.passwordLayout.error="password can't be less than 8 digits"
-            binding.editTextPassword.requestFocus()
-            return false
-        }
-        else if (!isStringContainNumber(binding.editTextPassword.text.toString())) {
-            binding.passwordLayout.error = "Required at least 1 digit"
-            binding.editTextPassword.requestFocus()
-            return false
-        } else if (!isStringLowerAndUpperCase(binding.editTextPassword.text.toString())) {
-            binding.passwordLayout.error = "Password must contain upper and lower case letters"
-            binding.editTextPassword.requestFocus()
-            return false
-        } else if (!isStringContainSpecialCharacter(binding.editTextPassword.text.toString())) {
-            binding.passwordLayout.error = "1 special character required"
-            binding.editTextPassword.requestFocus()
-            return false
-        } else {
+        else {
             binding.passwordLayout.isErrorEnabled = false
         }
     return true

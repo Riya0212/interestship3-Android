@@ -19,4 +19,11 @@
     <string name="don_t_have_an_account" tools:ignore="StringEscaping">Dont have an account?</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="label_length">Password minimum length should be 8</string>
+    <string name="label_enter_your_email_address_to_reset_your_password">Enter your Email address to reset your password.</string>
+    <string name="label_go_back_to_login">Go Back to Login</string>
+    <string name="label_yash_raj_sharma">Yash Raj Sharma</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_blood_group">Blood Group</string>
+    <string name="label_weight">Weight</string>
+    <string name="label_height">Height</string>
 </resources>

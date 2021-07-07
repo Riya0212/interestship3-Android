@@ -16,13 +16,21 @@ class registrationActivity : AppCompatActivity() {
         binding= ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupListeners()
+        binding.btnSignup.setOnClickListener {
+            val intent= Intent(this,userProfile::class.java)
+            startActivity(intent)
+        }
         binding.textViewLogin.setOnClickListener {
             val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
 
         }
+        binding.btnSignup.setOnClickListener {
+            val intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
     }
-    private fun isValidate(): Boolean= validateEmail() && validatePassword()
+    private fun isValidate(): Boolean= validateEmail() && validatePassword() && validateName() && validatePhoneNumber()
 
     private fun setupListeners(){
         binding.editTextName.addTextChangedListener(TextFieldValidation(binding.editTextName))
@@ -33,7 +41,7 @@ class registrationActivity : AppCompatActivity() {
     //validation check for name
     private fun validateName(): Boolean{
         if(binding.editTextName.text.toString().trim().isEmpty()){
-            binding.nameLayout.error="Required Field!"
+            binding.editTextName.error="Required Field!"
             binding.editTextName.requestFocus()
             return false
         }
@@ -46,37 +54,42 @@ class registrationActivity : AppCompatActivity() {
     //validation check for phonenumber
     private fun validatePhoneNumber(): Boolean{
         if(binding.editTextPhone.text.toString().trim().isEmpty()){
-            binding.phoneLayout.error="Required Field!"
+            binding.editTextPhone.error="Required Field!"
+            binding.editTextPhone.requestFocus()
+            return false
+        }
+        else if(binding.editTextPhone.text.toString().length>10){
+            binding.editTextPhone.error="Number cannot be greater than 10 digits"
             binding.editTextPhone.requestFocus()
             return false
         }
         else{
-            binding.nameLayout.isErrorEnabled=false
+            binding.phoneLayout.isErrorEnabled=false
         }
         return true
     }
     //validation check for password
     private fun validatePassword(): Boolean{
         if(binding.editTextPassword.text.toString().trim().isEmpty()){
-            binding.passwordLayout2.error="Required Field!"
+            binding.editTextPassword.error="Required Field!"
             binding.editTextPassword.requestFocus()
             return false
         }
         else if(binding.editTextPassword.text.toString().length<8){
-            binding.passwordLayout2.error="password can't be less than 8 digits"
+            binding.editTextPassword.error="password can't be less than 8 digits"
             binding.editTextPassword.requestFocus()
             return false
         }
         else if (!FieldValidators.isStringContainNumber(binding.editTextPassword.text.toString())) {
-            binding.passwordLayout2.error = "Required at least 1 digit"
+            binding.editTextPassword.error = "Required at least 1 digit"
             binding.editTextPassword.requestFocus()
             return false
         } else if (!FieldValidators.isStringLowerAndUpperCase(binding.editTextPassword.text.toString())) {
-            binding.passwordLayout2.error = "Password must contain upper and lower case letters"
+            binding.editTextPassword.error = "Password must contain upper and lower case letters"
             binding.editTextPassword.requestFocus()
             return false
         } else if (!FieldValidators.isStringContainSpecialCharacter(binding.editTextPassword.text.toString())) {
-            binding.passwordLayout2.error = "1 special character required"
+            binding.editTextPassword.error="Required atleast 1 special character"
             binding.editTextPassword.requestFocus()
             return false
         } else {
@@ -87,11 +100,11 @@ class registrationActivity : AppCompatActivity() {
     //validation for email
     private fun validateEmail(): Boolean {
         if (binding.editTextEmail.text.toString().trim().isEmpty()) {
-            binding.emailLayout2.error = "Required Field!"
+            binding.editTextEmail.error = "Required Field!"
             binding.editTextEmail.requestFocus()
             return false
         } else if (!FieldValidators.isValidEmail(binding.editTextEmail.text.toString())) {
-            binding.emailLayout2.error = "Invalid Email!"
+            binding.editTextEmail.error = "Invalid Email!"
             binding.editTextEmail.requestFocus()
             return false
         } else {
@@ -117,6 +130,12 @@ class registrationActivity : AppCompatActivity() {
                 }
                 R.id.editTextPassword->{
                     validatePassword()
+                }
+                R.id.editTextName->{
+                    validateName()
+                }
+                R.id.editTextPhone->{
+                    validatePhoneNumber()
                 }
             }
         }

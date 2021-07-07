@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCureLoginActivity"
         tools:ignore="AllowBackup">
+        <activity android:name=".userProfile"></activity>
         <activity android:name=".forgetPassword_activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
