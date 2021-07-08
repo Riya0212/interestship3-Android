@@ -187,24 +187,37 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
-
+    <!--
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/loginbtn_bg"
+            android:enabled="false"
+            android:text="@string/label_login"
+            android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite"
+            android:textSize="@dimen/sp_18"
+            app:backgroundTint="@color/colorDarkBlue"
+            app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+            app:layout_constraintStart_toStartOf="@id/guidelineouter"
+            app:layout_constraintTop_toBottomOf="@id/textViewForgot"/>
+    -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:background="@drawable/loginbtn_bg"
-        android:enabled="false"
         android:text="@string/label_login"
+        android:textSize="@dimen/sp_17"
         android:textColor="@color/colorWhite"
         android:textColorHighlight="@color/colorWhite"
-        android:textSize="@dimen/sp_18"
+        android:background="@drawable/loginbtn_bg"
+        android:layout_marginTop="@dimen/sp_10"
         app:backgroundTint="@color/colorDarkBlue"
-        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
-        app:layout_constraintStart_toStartOf="@id/guidelineouter"
-        app:layout_constraintTop_toBottomOf="@id/textViewForgot" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/textViewForgot"
+        app:layout_constraintStart_toStartOf="@id/guidelineleft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineright"/>
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewNewUser"
         android:layout_width="wrap_content"
