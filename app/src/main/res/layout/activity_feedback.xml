@@ -50,7 +50,8 @@
             app:layout_constraintTop_toTopOf="@id/guidefeedtop"
             app:layout_constraintStart_toStartOf="@id/guidefeedstart"
             android:src="@drawable/ellipsesampleimage2"
-
+            app:civ_border_width="@dimen/dp_3"
+            app:civ_border_color="@color/blue2"
             app:layout_constraintEnd_toStartOf="@id/containerlinear"
             android:id="@+id/imgdocprofilefeedback"
             android:layout_height="@dimen/dp_70">
@@ -61,7 +62,7 @@
             android:id="@+id/containerlinear"
             android:gravity="center"
             android:paddingTop="@dimen/dp_10"
-            android:paddingStart="@dimen/dp_10"
+
             app:layout_constraintStart_toEndOf="@id/imgdocprofilefeedback"
             app:layout_constraintTop_toTopOf="@id/guidefeedtop"
             android:orientation="vertical"
@@ -73,7 +74,7 @@
                 android:fontFamily="@font/poppinsbold"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="@dimen/sp_20"
+                android:textSize="@dimen/sp_14"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imgdocprofilefeedback"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -101,9 +102,9 @@
                 android:outlineSpotShadowColor="@color/black"
                 android:numStars="5"
                 android:isIndicator="true"
-                android:scaleX="0.5"
+                android:scaleX="0.4"
                 android:rating="3.4"
-                android:scaleY="0.5"
+                android:scaleY="0.4"
                 android:layout_gravity="start"
                 android:layout_height="wrap_content">
 
@@ -116,6 +117,8 @@
     android:paddingStart="@dimen/dp_10"
     android:paddingEnd="@dimen/dp_10"
     android:layout_marginStart="@dimen/dp_10"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dp_10"
     android:id="@+id/feedbackrecycle"
     android:layout_marginEnd="@dimen/dp_10"
     app:layout_constraintTop_toBottomOf="@id/containDocprofilelayout"

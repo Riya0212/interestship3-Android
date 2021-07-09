@@ -72,4 +72,8 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="_3_5">3.5</string>
+    <string name="very_nice_doctor">Very nice doctor</string>
+    <string name="are_you_a_doctor_or_a_patient">Are You a Doctor or a Patient?</string>
+    <string name="doctor">Doctor</string>
+    <string name="pat">Patient</string>
 </resources>

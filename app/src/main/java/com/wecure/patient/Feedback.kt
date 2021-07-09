@@ -6,14 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wecure.patient.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.activity_feedback.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class Feedback : AppCompatActivity() {
     private var nameFeedbackList = mutableListOf<String>()
     private var rateFeedbackList = mutableListOf<Float>()
     private var descFeedbackList = mutableListOf<String>()
 
-    private var _binding: FragmentHomeBinding? = null
 
     private val dataHistory = DataSource.createDataSetFeedBack()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +24,7 @@ class Feedback : AppCompatActivity() {
 
         postToListFeedback()
         feedbackrecycle.layoutManager= LinearLayoutManager(this,
-            RecyclerView.HORIZONTAL,false)
+            RecyclerView.VERTICAL,false)
         feedbackrecycle.adapter = FeedbackRecyclerAdapter(nameFeedbackList,descFeedbackList,rateFeedbackList)
     }
 

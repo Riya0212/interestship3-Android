@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectCategory">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guide_cat_top"
+        app:layout_constraintGuide_begin="@dimen/dp_20"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guide_cat_bottom"
+        app:layout_constraintGuide_end="@dimen/dp_20"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/guide_cat_top"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/blue2"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            android:id="@+id/txtheading_cat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/are_you_a_doctor_or_a_patient"
+            app:layout_constraintBottom_toTopOf="@id/img_cat_doctor"
+            >
+
+        </com.google.android.material.textview.MaterialTextView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:src="@drawable/doctor"
+            app:civ_circle_background_color="@color/blue3"
+            android:id="@+id/img_cat_doctor"
+            app:layout_constraintTop_toBottomOf="@id/txtheading_cat"
+            android:outlineAmbientShadowColor="@color/blue2"
+            android:outlineSpotShadowColor="@color/blue2"
+            android:translationY="-15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/img_cat_patient"
+            android:layout_height="120dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/blue2"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+android:layout_margin="@dimen/dp_10"
+        android:id="@+id/txt_doc_cat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/doctor"
+        app:layout_constraintTop_toBottomOf="@id/img_cat_doctor"
+        app:layout_constraintBottom_toTopOf="@id/img_cat_patient"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:outlineAmbientShadowColor="@color/blue2"
+            android:outlineSpotShadowColor="@color/blue2"
+
+            android:src="@drawable/patient"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_doc_cat"
+            app:layout_constraintBottom_toTopOf="@id/txt_cat_pat"
+            app:civ_circle_background_color="@color/blue3"
+            android:id="@+id/img_cat_patient"
+            android:layout_height="120dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_cat_patient"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/blue2"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_16"
+        android:id="@+id/txt_cat_pat"
+        app:layout_constraintBottom_toTopOf="@id/fabnext"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/pat"
+        >
+
+    </com.google.android.material.textview.MaterialTextView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/pink"
+        android:id="@+id/fabnext"
+        android:tint="@color/pink"
+        app:borderWidth="@dimen/dp_0"
+        app:rippleColor="@color/blue1"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/txt_cat_pat"
+        app:layout_constraintBottom_toBottomOf="@id/guide_cat_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

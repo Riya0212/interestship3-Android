@@ -2,17 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layoutcontainerhistory"
+    android:id="@+id/layoutcontainerfeedback"
     tools:context=".feedback_recycler_view">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:backgroundTint="@color/blue3"
+        android:paddingEnd="@dimen/dp_15"
+
         app:cardCornerRadius="@dimen/dp_7"
         app:cardElevation="@dimen/dp_3"
         card_view:cardUseCompatPadding="true"
@@ -20,7 +22,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_height="wrap_content">
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
 
             android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.Guideline
@@ -61,10 +63,12 @@
                 android:layout_width="wrap_content"
                 android:layout_marginStart="@dimen/dp_10"
                 android:layout_marginEnd="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
                 app:layout_constraintStart_toStartOf="@id/guidelinecardstartouterfeedback"
                 app:layout_constraintTop_toTopOf="@id/guidelinetopcardouterfeedback"
                 app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouterfeedback"
-                android:id="@+id/layoutdoctordetails"
+                android:id="@+id/layoutfeedback"
                 android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.Guideline
@@ -72,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/guidelinecardstartfeedback"
                     android:orientation="vertical"
-                    card_view:layout_constraintGuide_begin="@dimen/dp_3">
+                    card_view:layout_constraintGuide_begin="@dimen/dp_7">
 
                 </androidx.constraintlayout.widget.Guideline>
                 <androidx.constraintlayout.widget.Guideline
@@ -109,10 +113,10 @@
                     android:textSize="@dimen/sp_12"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_10"
-                    app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
+                    app:layout_constraintEnd_toEndOf="@id/layoutfeedback"
                     android:fontFamily="@font/poppinssemibold"
                     app:layout_constraintTop_toTopOf="@id/guidelinetopcardfeedback"
-                    app:layout_constraintStart_toStartOf="@id/layoutdoctordetails"
+                    app:layout_constraintStart_toStartOf="@id/layoutfeedback"
 
                     android:layout_height="wrap_content">
 
@@ -121,12 +125,12 @@
                     android:layout_width="wrap_content"
                     android:textStyle="bold"
                     android:textColor="@color/blue2"
-                    android:text="Very nice doctor"
+                    android:text="@string/very_nice_doctor"
                     android:id="@+id/txtdescription_feedback"
-                    app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
+                    app:layout_constraintEnd_toEndOf="@id/layoutfeedback"
                     app:layout_constraintTop_toBottomOf="@id/txtNameOfPatient_feedback"
                     app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardfeedback"
-                    app:layout_constraintStart_toStartOf="@id/layoutdoctordetails"
+                    app:layout_constraintStart_toStartOf="@id/layoutfeedback"
                     android:textSize="@dimen/sp_10"
                     android:paddingStart="@dimen/dp_0"
                     android:paddingEnd="@dimen/dp_10"
@@ -136,11 +140,11 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                app:layout_constraintEnd_toEndOf="@id/guidelinecardendouterfeedback"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/guidelinetopcardouterfeedback"
                 app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouterfeedback"
-                app:layout_constraintStart_toEndOf="@id/layoutdoctordetails"
-                android:id="@+id/layoutdoctordate"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:id="@+id/layoutdoctordatefeedback"
                 android:layout_height="wrap_content">
                 <androidx.constraintlayout.widget.Guideline
                     android:layout_width="wrap_content"
@@ -169,6 +173,7 @@
                 <androidx.constraintlayout.widget.Guideline
                     android:layout_width="wrap_content"
                     android:orientation="horizontal"
+
                     card_view:layout_constraintGuide_end="@dimen/dp_7"
                     android:id="@+id/guidelinebottomcardhistoryfeedback"
                     android:layout_height="wrap_content">
@@ -178,13 +183,13 @@
                     android:layout_width="wrap_content"
                    android:numStars="1"
                     android:isIndicator="true"
-                    android:scaleX="0.2"
+                    android:scaleX="0.4"
                     android:rating="0.6"
-                    android:scaleY="0.2"
+                    android:scaleY="0.4"
                     android:id="@+id/imgrate_feedback"
-                    app:layout_constraintStart_toStartOf="@id/layoutdoctordate"
-                    app:layout_constraintEnd_toEndOf="@id/layoutdoctordate"
-                    app:layout_constraintTop_toTopOf="@id/layoutdoctordate"
+                    app:layout_constraintStart_toStartOf="@id/layoutdoctordatefeedback"
+                    app:layout_constraintEnd_toEndOf="@id/layoutdoctordatefeedback"
+                    app:layout_constraintTop_toTopOf="@id/layoutdoctordatefeedback"
                     app:layout_constraintBottom_toTopOf="@id/txtrate_feedback"
                     android:layout_height="wrap_content">
 
@@ -196,12 +201,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/_3_5"
                     android:textColor="@color/blue2"
-                    android:textSize="@dimen/dp_10"
+                    android:textSize="@dimen/sp_10"
                     app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardhistoryfeedback"
                     app:layout_constraintEnd_toEndOf="@id/guidelinecardendhistoryfeedback"
                     app:layout_constraintHorizontal_bias="0.45"
                     app:layout_constraintStart_toStartOf="@id/guidelinecardstarthistoryfeedback"
-                    app:layout_constraintTop_toBottomOf="@id/imgrate" />
+                    app:layout_constraintTop_toBottomOf="@id/imgrate_feedback" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

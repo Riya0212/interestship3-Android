@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".feedback_recycler_view"></activity>
-        <activity android:name=".Feedback" />
+        <activity android:name=".SelectCategory"></activity>
+        <activity android:name=".feedback_recycler_view" />
+        <activity android:name=".Feedback"></activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
