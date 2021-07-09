@@ -92,7 +92,7 @@
 
         android:textColor="@color/black"
         android:fontFamily="@font/poppinsbold"
-        android:textSize="@dimen/sp_20"
+        android:textSize="@dimen/sp_18"
         android:id="@+id/txtcontactus"
         app:layout_constraintTop_toTopOf="@id/layoutcontaintercontactus"
         app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
@@ -113,7 +113,7 @@
             android:hint="@string/name_contact_us"
             app:startIconDrawable="@drawable/ic_baseline_person_24"
             android:textColorHint="@color/blue3"
-            android:elevation="@dimen/dp_5"
+
             app:hintAnimationEnabled="true"
             app:startIconTint="@color/blue2"
             app:boxStrokeWidth="0dp"
@@ -148,7 +148,7 @@
             android:background="@drawable/edt_background"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:textColorHint="@color/blue3"
-            android:elevation="@dimen/dp_5"
+
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:layout_constraintBottom_toTopOf="@id/edthphonenumber"
@@ -183,7 +183,7 @@
             app:counterMaxLength="10"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
-            android:elevation="@dimen/dp_5"
+
             android:textColorHint="@color/blue3"
             app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"
             android:layout_width="match_parent"

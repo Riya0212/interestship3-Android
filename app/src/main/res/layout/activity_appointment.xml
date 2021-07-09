@@ -5,17 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Appointment">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/id_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/topG"
+        app:layout_constraintGuide_begin="@dimen/dp_25"
+        android:orientation="horizontal">
+
+    </androidx.constraintlayout.widget.Guideline>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomG"
+        app:layout_constraintGuide_end="@dimen/dp_60"
+        android:orientation="horizontal">
+
+    </androidx.constraintlayout.widget.Guideline>
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
-        android:textSize="@dimen/sp_25"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintTop_toTopOf="@id/topG"
         app:layout_constraintBottom_toTopOf="@id/card_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/blue1"
         android:text="@string/appointment"
-        android:layout_marginBottom="@dimen/dp_25"
-        android:translationY="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_20"
+
         android:fontFamily="@font/poppinsbold"
         android:id="@+id/txt_appointment_title"
         app:fontFamily="@font/poppinsbold"
@@ -26,7 +52,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/dp_0"
         app:layout_constraintTop_toBottomOf="@id/txt_appointment_title"
-        app:layout_constraintBottom_toTopOf="@id/imgback_wave"
+        app:layout_constraintBottom_toTopOf="@id/bottomG"
         app:layout_constraintStart_toStartOf="parent"
         android:backgroundTint="@color/blue3"
         android:id="@+id/card_container"
@@ -151,7 +177,6 @@
              android:textSize="@dimen/sp_12"
              app:boxStrokeWidth="0dp"
              app:boxStrokeWidthFocused="0dp"
-             android:elevation="@dimen/dp_5"
              android:background="@drawable/edt_background"
              app:fontFamily="@font/poppinssemibold"
              >
@@ -187,7 +212,7 @@
              app:layout_constraintHorizontal_bias="0"
              android:background="@drawable/edt_background"
              android:paddingStart="@dimen/dp_5"
-             android:elevation="@dimen/dp_5"
+
              android:paddingEnd="@dimen/dp_5"
              app:layout_constraintTop_toBottomOf="@id/txt_date_patient"
              app:layout_constraintStart_toStartOf="@id/guide_start"
@@ -204,7 +229,7 @@
                  app:endIconTint="@color/blue2"
                  app:boxStrokeWidth="0dp"
                  app:boxStrokeWidthFocused="0dp"
-                 android:elevation="@dimen/dp_5"
+
                  app:endIconDrawable="@drawable/ic_baseline_calendar_today_24"
                  android:layout_height="match_parent">
 
@@ -238,7 +263,7 @@
              app:layout_constraintEnd_toEndOf="@id/guide_end"
              app:layout_constraintBottom_toTopOf="@id/check_terms_patient"
              android:textSize="@dimen/sp_12"
-             android:elevation="@dimen/dp_5"
+
              android:paddingEnd="@dimen/dp_5"
              app:boxStrokeWidth="0dp"
              app:boxStrokeWidthFocused="0dp"
@@ -257,8 +282,7 @@
          <com.google.android.material.checkbox.MaterialCheckBox
              android:layout_width="wrap_content"
              android:id="@+id/check_terms_patient"
-             android:paddingStart="@dimen/dp_5"
-             android:paddingEnd="@dimen/dp_5"
+
              app:layout_constraintTop_toBottomOf="@id/edt_problem_patient"
              app:layout_constraintStart_toStartOf="@id/guide_start"
              app:layout_constraintEnd_toEndOf="@id/guide_end"

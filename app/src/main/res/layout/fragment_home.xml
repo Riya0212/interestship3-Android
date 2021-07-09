@@ -99,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/dp_5" />
+        app:layout_constraintGuide_begin="@dimen/dp_0" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEndinner"
         android:layout_width="wrap_content"
@@ -111,10 +111,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="20dp" />
+        app:layout_constraintGuide_end="0dp" />
     <com.google.android.material.card.MaterialCardView
         android:layout_width="@dimen/dp_0"
-        android:padding="@dimen/dp_7"
+        android:paddingStart="@dimen/dp_7"
+        android:paddingEnd="@dimen/dp_7"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         card_view:cardUseCompatPadding="true"
         card_view:cardElevation="@dimen/dp_5"
