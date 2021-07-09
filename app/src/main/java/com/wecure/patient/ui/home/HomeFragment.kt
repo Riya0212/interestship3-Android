@@ -85,7 +85,7 @@ class HomeFragment : Fragment() {
         recyclerDoctors.layoutManager= LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
         recyclerDoctors.adapter = DoctorRecyclerAdapter(nameList,categoryList,profileList)
 
-        recyclerHistory.layoutManager= LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
+        recyclerHistory.layoutManager= LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
         recyclerHistory.adapter = HistoryRecyclerAdapter(nameListHistory,categoryListHistory,profileListHistory,dateListHistory)
     }
 

@@ -57,76 +57,31 @@
 
         </androidx.constraintlayout.widget.Guideline>
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="@dimen/dp_60"
+        android:layout_width="@dimen/dp_45"
         android:padding="@dimen/dp_3"
         android:src="@drawable/download"
         app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
-        app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
+        app:layout_constraintBottom_toTopOf="@id/txtNameOfDoctor_history"
         app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
-        app:layout_constraintEnd_toStartOf="@id/layoutdoctordetails"
+       app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
         android:id="@+id/imgdoctorphoto_history"
-        android:layout_height="@dimen/dp_60">
+        android:layout_height="@dimen/dp_45">
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
-   <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-       android:layout_marginStart="@dimen/dp_10"
-       android:layout_marginEnd="@dimen/dp_20"
-        app:layout_constraintStart_toEndOf="@id/imgdoctorphoto_history"
-        app:layout_constraintEnd_toStartOf="@id/layoutdoctordate"
-        app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
-        app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
-       android:id="@+id/layoutdoctordetails"
-        android:layout_height="wrap_content">
-
-       <androidx.constraintlayout.widget.Guideline
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:id="@+id/guidelinecardstart"
-           android:orientation="vertical"
-           card_view:layout_constraintGuide_begin="@dimen/dp_3">
-
-       </androidx.constraintlayout.widget.Guideline>
-       <androidx.constraintlayout.widget.Guideline
-           android:layout_width="wrap_content"
-           android:orientation="horizontal"
-           card_view:layout_constraintGuide_begin="@dimen/dp_7"
-           android:id="@+id/guidelinetopcard"
-           android:layout_height="wrap_content">
-
-       </androidx.constraintlayout.widget.Guideline>
-       <androidx.constraintlayout.widget.Guideline
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:id="@+id/guidelinecardend"
-           android:orientation="vertical"
-           card_view:layout_constraintGuide_end="@dimen/dp_7">
-
-       </androidx.constraintlayout.widget.Guideline>
-       <androidx.constraintlayout.widget.Guideline
-           android:layout_width="wrap_content"
-           android:orientation="horizontal"
-           card_view:layout_constraintGuide_end="@dimen/dp_3"
-           android:id="@+id/guidelinebottomcard"
-           android:layout_height="wrap_content">
-
-       </androidx.constraintlayout.widget.Guideline>
-
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
-            android:text="@string/name"
+            android:text="@string/dr_hrishita_mavani_doctor_name"
             android:id="@+id/txtNameOfDoctor_history"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_12"
+            android:textSize="@dimen/sp_10"
             android:paddingEnd="@dimen/dp_20"
             android:paddingStart="@dimen/dp_10"
-            app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
+            app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
             android:fontFamily="@font/poppinssemibold"
-            app:layout_constraintTop_toTopOf="@id/guidelinetopcard"
-            app:layout_constraintStart_toStartOf="@id/layoutdoctordetails"
-
+            app:layout_constraintTop_toBottomOf="@+id/imgdoctorphoto_history"
+            app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
             android:layout_height="wrap_content">
 
         </com.google.android.material.textview.MaterialTextView>
@@ -134,83 +89,52 @@
             android:layout_width="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/blue2"
-            android:text="@string/category"
+            android:text="orthopedic"
             android:id="@+id/txtcategoryOfDoctor_history"
-            app:layout_constraintEnd_toEndOf="@id/layoutdoctordetails"
+            app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
             app:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor_history"
-            app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcard"
-            app:layout_constraintStart_toStartOf="@id/layoutdoctordetails"
+            app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
             android:textSize="@dimen/sp_10"
             android:paddingStart="@dimen/dp_0"
             android:paddingEnd="@dimen/dp_10"
             android:fontFamily="@font/poppinsregular"
             android:layout_height="wrap_content">
         </com.google.android.material.textview.MaterialTextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
-        app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
-        app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
-        app:layout_constraintStart_toEndOf="@id/layoutdoctordetails"
-        android:id="@+id/layoutdoctordate"
-        android:layout_height="wrap_content">
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/guidelinecardstarthistory"
-            android:orientation="vertical"
-            card_view:layout_constraintGuide_begin="@dimen/dp_7">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
+    app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
+    app:layout_constraintTop_toBottomOf="@+id/txtcategoryOfDoctor_history"
+    app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
+    android:layout_height="wrap_content">
 
-        </androidx.constraintlayout.widget.Guideline>
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            card_view:layout_constraintGuide_begin="@dimen/dp_7"
-            android:id="@+id/guidelinetopcardhistory"
-            android:layout_height="wrap_content">
-
-        </androidx.constraintlayout.widget.Guideline>
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/guidelinecardendhistory"
-            android:orientation="vertical"
-            card_view:layout_constraintGuide_end="@dimen/dp_7">
-
-        </androidx.constraintlayout.widget.Guideline>
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            card_view:layout_constraintGuide_end="@dimen/dp_7"
-            android:id="@+id/guidelinebottomcardhistory"
-            android:layout_height="wrap_content">
-
-        </androidx.constraintlayout.widget.Guideline>
     <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="@dimen/dp_20"
+        android:layout_width="@dimen/dp_15"
         android:src="@drawable/ic_baseline_calendar_today_24"
         android:id="@+id/imgdate_history"
-        app:layout_constraintStart_toStartOf="@id/layoutdoctordate"
-        app:layout_constraintEnd_toEndOf="@id/layoutdoctordate"
-        app:layout_constraintTop_toTopOf="@id/layoutdoctordate"
-        app:layout_constraintBottom_toTopOf="@id/txtdate_history"
-        android:layout_height="@dimen/dp_20">
+        app:layout_constraintTop_toBottomOf="@id/txtcategoryOfDoctor_history"
+
+        app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
+        android:layout_height="@dimen/dp_15">
 
     </com.google.android.material.imageview.ShapeableImageView>
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:id="@+id/txtdate_history"
-            app:layout_constraintTop_toBottomOf="@id/imgdate_history"
-            app:layout_constraintBottom_toBottomOf="@id/layoutdoctordate"
-            android:text="@string/date"
-            android:textSize="@dimen/dp_10"
-            android:textColor="@color/blue2"
-            app:layout_constraintEnd_toEndOf="@id/guidelinecardendhistory"
-            app:layout_constraintStart_toStartOf="@id/guidelinecardstarthistory"
-            android:layout_height="wrap_content">
-        </com.google.android.material.textview.MaterialTextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:id="@+id/txtdate_history"
+        app:layout_constraintTop_toBottomOf="@id/imgdate_history"
+        android:text="@string/date"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:textSize="@dimen/dp_10"
+        android:textColor="@color/blue2"
+        android:layout_height="wrap_content"
+
+        >
+    </com.google.android.material.textview.MaterialTextView>
+</LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
