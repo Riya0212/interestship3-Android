@@ -246,6 +246,90 @@ class DataSource{
 
             return listHistory
         }
+        fun createDataSetFeedBack(): ArrayList<FeedbackModel> {
+            val listFeedback = ArrayList<FeedbackModel>()
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
 
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+            listFeedback.add(
+                FeedbackModel(
+                    "1-Hrishita Mavani",
+                    "Very Nice Treatment",
+                    1.2f,
+                )
+
+            )
+
+            return listFeedback
+        }
     }
 }
