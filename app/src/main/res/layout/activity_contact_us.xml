@@ -116,6 +116,8 @@
             android:elevation="@dimen/dp_5"
             app:hintAnimationEnabled="true"
             app:startIconTint="@color/blue2"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             app:layout_constraintTop_toBottomOf="@id/txtcontactus"
             app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
@@ -147,7 +149,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:textColorHint="@color/blue3"
             android:elevation="@dimen/dp_5"
-
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             app:layout_constraintBottom_toTopOf="@id/edthphonenumber"
             app:layout_constraintTop_toBottomOf="@id/edtname"
             app:layout_constraintStart_toStartOf="@id/layoutcontaintercontactus"
@@ -178,7 +181,8 @@
             app:startIconTint="@color/blue2"
             app:counterEnabled="true"
             app:counterMaxLength="10"
-
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
             android:elevation="@dimen/dp_5"
             android:textColorHint="@color/blue3"
             app:layout_constraintEnd_toEndOf="@id/layoutcontaintercontactus"

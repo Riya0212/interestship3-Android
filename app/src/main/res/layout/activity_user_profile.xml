@@ -108,7 +108,6 @@
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toBottomOf="@id/imageMan" />
 
-
     <View
         android:id="@+id/viewlayout"
         android:layout_width="0dp"

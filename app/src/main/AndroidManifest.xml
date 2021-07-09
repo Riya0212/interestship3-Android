@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wecure.doctor">
+    package="com.wecure.patient">
 
     <application
         android:allowBackup="true"
@@ -9,29 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".SplashScreen">            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".feedback_recycler_view"></activity>
+        <activity android:name=".Feedback" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-        <activity android:name=".Appointment" />
-        <activity android:name=".DoctorDetail">
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".Appointment" />
+        <activity android:name=".DoctorDetail" />
         <activity android:name=".ContactUs" />
         <activity android:name=".HistoryRecyclerView" />
         <activity android:name=".DoctorRecyclerView" />
         <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen" />
-
         <activity android:name=".userProfile" />
         <activity android:name=".forgetPassword_activity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".registrationActivity" />
-
     </application>
 
 </manifest>

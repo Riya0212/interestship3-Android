@@ -34,6 +34,7 @@
         android:elevation="@dimen/dp_4"
         android:src="@drawable/ellipsesampleimage2"
         app:civ_border_color="@color/blue2"
+        android:translationY="-15dp"
         app:civ_border_width="@dimen/dp_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/container"
@@ -54,7 +55,6 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/img_user_profile"
-    android:layout_marginTop="@dimen/dp_3"
     android:layout_height="wrap_content">
 
 </com.google.android.material.textview.MaterialTextView>
@@ -73,13 +73,28 @@
         android:layout_height="wrap_content">
 
     </RatingBar>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ratingbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="normal"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:textSize="@dimen/sp_12"
+        android:text="Reviews"
+        android:translationY="-14dp"
+        android:textColor="@color/blue1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/viewfeedbacklink"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/dp_0"
         android:id="@+id/container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ratingbar"
+        app:layout_constraintTop_toBottomOf="@id/viewfeedbacklink"
         android:layout_height="match_parent">
         <androidx.constraintlayout.widget.Guideline
             android:layout_width="wrap_content"
@@ -152,9 +167,44 @@
                     app:layout_constraintStart_toStartOf="@id/innerContainer"
                     app:layout_constraintEnd_toEndOf="@id/innerContainer"
                     android:text="@string/dummy_intro"
-                  app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroDetails"
+                  app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroTitle"
+                    app:layout_constraintBottom_toTopOf="@id/txt_doctorqualificationTitle"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="@dimen/sp_12"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:text="Qualification"
+                    android:layout_marginTop="@dimen/dp_5"
+
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintEnd_toEndOf="@id/innerContainer"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroDetails"
+                    app:layout_constraintBottom_toTopOf="@id/txt_doctorqualificationDetails"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    android:id="@+id/txt_doctorqualificationTitle"
+                    android:textColor="@color/blue2"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_doctorqualificationDetails"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    app:layout_constraintEnd_toEndOf="@id/innerContainer"
+                    android:text="Orthopedic"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroDetails"
                     app:layout_constraintBottom_toBottomOf="@id/txt_doctorExperienceTitle"
                     android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5"
                     android:fontFamily="@font/poppinsregular"
                     android:textSize="@dimen/sp_12"
                     android:layout_height="wrap_content">
@@ -168,7 +218,7 @@
                     android:textStyle="bold"
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroDetails"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorqualificationDetails"
                     app:layout_constraintStart_toStartOf="@id/innerContainer"
                     android:id="@+id/txt_doctorExperienceTitle"
                     android:textColor="@color/blue2"
