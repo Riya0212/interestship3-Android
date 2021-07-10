@@ -17,7 +17,7 @@ class registrationActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupListeners()
         binding.btnSignup.setOnClickListener {
-            val intent= Intent(this,userProfile::class.java)
+            val intent= Intent(this,Homescreen::class.java)
             startActivity(intent)
         }
         binding.textViewLogin.setOnClickListener {
@@ -25,10 +25,7 @@ class registrationActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        binding.btnSignup.setOnClickListener {
-            val intent= Intent(this,MainActivity::class.java)
-            startActivity(intent)
-        }
+
     }
     private fun isValidate(): Boolean= validateEmail() && validatePassword() && validateName() && validatePhoneNumber()
 

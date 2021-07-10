@@ -28,9 +28,6 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
-
         setupListeners()
 
         binding.textViewSignup.setOnClickListener {
@@ -42,6 +39,8 @@ class MainActivity : AppCompatActivity() {
             if(isValidate()) {
                 Toast.makeText(this,"validated",Toast.LENGTH_SHORT).show()
             }
+            val intent=Intent(this,forgetPassword_activity::class.java)
+            startActivity(intent)
         }
         binding.textViewForgot.setOnClickListener{
             val intent= Intent(this,forgetPassword_activity::class.java)
