@@ -113,6 +113,141 @@ class DataSource{
             )
             return list
         }
+        fun createDataSethistdoc(): ArrayList<HistoryDoctorModel>{
+            val listReqhistdoc = ArrayList<HistoryDoctorModel>()
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+            listReqhistdoc.add(
+                HistoryDoctorModel(
+                    "1-Hrishita Mavani",
+                    "head ache and fever",
+                    R.drawable.download,
+                    "10-07-2020"
+                )
+            )
+        return listReqhistdoc
+        }
+        fun createDataSetreq(): ArrayList<AppointmentReqModel>{
+            val listReq = ArrayList<AppointmentReqModel>()
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+            listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )
+
+            return listReq
+        }
 
 
         fun createDataSetHistory(): ArrayList<HistoryModel>{

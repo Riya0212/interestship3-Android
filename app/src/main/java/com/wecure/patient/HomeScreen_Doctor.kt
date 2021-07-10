@@ -9,12 +9,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.wecure.patient.databinding.ActivityHomeScreenBinding
-import com.wecure.patient.ui.dashboard.DashboardFragment
 import com.wecure.patient.ui.dashboard.DashboardFragment_Doctor
-import com.wecure.patient.ui.home.HomeFragment
 import com.wecure.patient.ui.home.HomeFragment_Doctor
 
-class HomeScreen : AppCompatActivity() {
+class HomeScreen_Doctor : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeScreenBinding
 
@@ -24,13 +22,13 @@ class HomeScreen : AppCompatActivity() {
 
         binding = ActivityHomeScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val homefragment = HomeFragment()
-        val proflefragment = DashboardFragment()
+        val homefragment_doctor = HomeFragment_Doctor()
+        val profilefragment_doctor = DashboardFragment_Doctor()
 
-        makecurrentfragment(homefragment)
+        makecurrentfragment(homefragment_doctor)
 
         val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_activity_home_screen)
+        val navController = findNavController(R.id.nav_host_fragment_activity_home_screen_doctor)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
@@ -42,8 +40,8 @@ class HomeScreen : AppCompatActivity() {
         navView.setupWithNavController(navController)
         navView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.navigation_home -> makecurrentfragment(homefragment)
-                R.id.navigation_profile -> makecurrentfragment(proflefragment)
+                R.id.navigation_home -> makecurrentfragment(homefragment_doctor)
+                R.id.navigation_profile -> makecurrentfragment(profilefragment_doctor)
             }
             true
         }
@@ -53,7 +51,7 @@ class HomeScreen : AppCompatActivity() {
 
     private fun makecurrentfragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.nav_host_fragment_activity_home_screen, fragment)
+            replace(R.id.nav_host_fragment_activity_home_screen_doctor, fragment)
             commit()
         }
 }

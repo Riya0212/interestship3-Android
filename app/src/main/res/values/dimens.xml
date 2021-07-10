@@ -54,6 +54,7 @@
     <dimen name="sp_40">40sp</dimen>
 
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dp_350">350dp</dimen>
 
 
 </resources>

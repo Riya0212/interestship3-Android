@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.wecure.patient.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class DashboardFragment_Doctor : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel_Doctor
     private var _binding: FragmentDashboardBinding? = null

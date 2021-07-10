@@ -57,7 +57,7 @@
 
         </androidx.constraintlayout.widget.Guideline>
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="@dimen/dp_45"
+        android:layout_width="@dimen/dp_60"
         android:padding="@dimen/dp_3"
         android:src="@drawable/download"
         app:layout_constraintTop_toTopOf="@id/guidelinetopcardouter"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
        app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
         android:id="@+id/imgdoctorphoto_history"
-        android:layout_height="@dimen/dp_45">
+        android:layout_height="@dimen/dp_60">
 
     </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -75,7 +75,7 @@
             android:id="@+id/txtNameOfDoctor_history"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_10"
+            android:textSize="@dimen/sp_12"
             android:paddingEnd="@dimen/dp_20"
             android:paddingStart="@dimen/dp_10"
             app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
@@ -88,24 +88,43 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:textStyle="bold"
-            android:textColor="@color/blue2"
+            android:textColor="@color/blue1"
             android:text="orthopedic"
             android:id="@+id/txtcategoryOfDoctor_history"
             app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
             app:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor_history"
+            app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
+            android:textSize="@dimen/sp_12"
+            android:paddingStart="@dimen/dp_0"
+            android:paddingEnd="@dimen/dp_10"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_height="wrap_content">
+
+
+        </com.google.android.material.textview.MaterialTextView>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/blue2"
+            android:text="HeadAche and fever"
+            android:id="@+id/txtreason_history"
+            app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
+            app:layout_constraintTop_toBottomOf="@id/txtcategoryOfDoctor_history"
             app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
             android:textSize="@dimen/sp_10"
             android:paddingStart="@dimen/dp_0"
             android:paddingEnd="@dimen/dp_10"
             android:fontFamily="@font/poppinsregular"
             android:layout_height="wrap_content">
+
+
         </com.google.android.material.textview.MaterialTextView>
 <LinearLayout
     android:layout_width="wrap_content"
     android:orientation="horizontal"
        app:layout_constraintBottom_toBottomOf="@id/guidelinebottomcardouter"
     app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
-    app:layout_constraintTop_toBottomOf="@+id/txtcategoryOfDoctor_history"
+    app:layout_constraintTop_toBottomOf="@+id/txtreason_history"
     app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
     android:layout_height="wrap_content">
 

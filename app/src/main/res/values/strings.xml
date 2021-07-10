@@ -76,4 +76,15 @@
     <string name="are_you_a_doctor_or_a_patient">Are You a Doctor or a Patient?</string>
     <string name="doctor">Doctor</string>
     <string name="pat">Patient</string>
+    <string name="cancel">Cancel</string>
+    <string name="appointment_details">Appointment Details</string>
+    <string name="dsgdsfsgsgs">dsgdsfsgsgs</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="gender">Gender</string>
+    <string name="problem">Problem</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="specialization">Specialization</string>
+    <string name="hey_doctor">Hey Doctor</string>
 </resources>
