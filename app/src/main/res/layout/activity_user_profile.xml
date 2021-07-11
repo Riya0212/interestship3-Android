@@ -79,6 +79,7 @@
         app:layout_constraintBottom_toBottomOf="@id/guide_inner"
         app:layout_constraintTop_toBottomOf="@id/guide_top"
         tools:ignore="MissingConstraints" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageMan"
         android:layout_width="130dp"
@@ -129,12 +130,13 @@
         app:layout_constraintTop_toBottomOf="@id/textName" />
 -->
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_ellipse_3"
         android:src="@drawable/ic_group_23"
         app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintTop_toBottomOf="@id/textName"/>
+        app:layout_constraintTop_toBottomOf="@id/textName" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewName"
@@ -146,8 +148,8 @@
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textName"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
         tools:ignore="MissingConstraints,NotSibling" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -155,128 +157,146 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
-        android:textColor="@color/colorBlack"
         android:inputType="textPersonName"
         android:padding="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sp_5"
         android:text="@string/label_phone_number"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/editTextName"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"/>
+        app:layout_constraintStart_toStartOf="@id/guide_outer"
+        app:layout_constraintTop_toBottomOf="@id/editTextName" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
-        android:textColor="@color/colorBlack"
-        android:padding="@dimen/sp_5"
         android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/textViewPhone"
+        android:padding="@dimen/sp_5"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewPhone" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sp_5"
         android:text="@string/label_gender"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/editTextPhone"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"/>
+        app:layout_constraintStart_toStartOf="@id/guide_outer"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextGender"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
-        android:textColor="@color/colorBlack"
         android:inputType="text"
         android:padding="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/textViewGender"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewGender" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewBlood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sp_5"
         android:text="@string/label_blood_group"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/editTextGender"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"/>
+        app:layout_constraintStart_toStartOf="@id/guide_outer"
+        app:layout_constraintTop_toBottomOf="@id/editTextGender" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextBlood"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
-        android:textColor="@color/colorBlack"
         android:inputType="text"
         android:padding="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/textViewBlood"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewBlood" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sp_5"
         android:text="@string/label_weight"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/editTextBlood"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"/>
+        app:layout_constraintStart_toStartOf="@id/guide_outer"
+        app:layout_constraintTop_toBottomOf="@id/editTextBlood" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextWeight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
-        android:textColor="@color/colorBlack"
         android:inputType="text"
         android:padding="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/textViewWeight"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewWeight" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sp_5"
         android:text="@string/label_height"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/editTextWeight"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"/>
+        app:layout_constraintStart_toStartOf="@id/guide_outer"
+        app:layout_constraintTop_toBottomOf="@id/editTextWeight" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextHeight"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/input_bg"
-        android:textColor="@color/colorBlack"
         android:inputType="text"
         android:padding="@dimen/sp_5"
-        app:layout_constraintTop_toBottomOf="@id/textViewHeight"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
         app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"/>
+        app:layout_constraintTop_toBottomOf="@id/textViewHeight" />
 
+    <Button
+        android:id="@+id/btnok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_ok"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="639dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.wecureloginactivity
+package com.wecure.patient
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,8 +11,8 @@ class BookAgain : AppCompatActivity() {
         setContentView(R.layout.activity_book_again)
         val floatButton: FloatingActionButton = findViewById(R.id.btnfloating)
         floatButton.setOnClickListener{
-        val intent=Intent(this,Appointment::class.java)
-            startActivity(intent)
+        //val intent=Intent(this,Appointment::class.java)
+          //  startActivity(intent)
         }
     }
 }

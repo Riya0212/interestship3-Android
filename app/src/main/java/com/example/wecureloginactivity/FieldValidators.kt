@@ -1,4 +1,4 @@
-package com.example.wecureloginactivity
+package com.wecure.patient
 
 import android.util.Patterns
 import java.util.regex.Pattern

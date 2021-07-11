@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.wecureloginactivity">
+    package="com.wecure.patient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCureLoginActivity"
         tools:ignore="AllowBackup">
+        <activity android:name=".updatePassword"></activity>
         <activity android:name=".BookAgain" />
         <activity android:name=".userProfile" />
         <activity android:name=".forgetPassword_activity" />
