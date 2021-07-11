@@ -9,6 +9,9 @@ import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.wecure.patient.Extensions.toast
+import com.wecure.patient.FireBaseUtils.firebaseAuth
 
 import kotlinx.android.synthetic.main.activity_registration.*
 
@@ -36,44 +39,47 @@ class registrationActivity : AppCompatActivity() {
             userEmail = editTextEmail.text.toString()
             userPassword = editTextPassword.text.toString()
 
-            if (TextUtils.isEmpty(userName) || TextUtils.isEmpty(userPhone) || TextUtils.isEmpty(
-                    userEmail
-                ) || TextUtils.isEmpty(userPassword)
-            )
+            if (notEmpty()) {
+                auth.createUserWithEmailAndPassword(userEmail, userPassword)
+                    .addOnCompleteListener(this, OnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                this,
+                                "Account Created successfully",
+                                Toast.LENGTH_LONG
+                            )
+                                .show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Failed to authenticate",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    })
+            } else {
                 createAccountInputsArray.forEach { input ->
                     if (input.text.toString().trim().isEmpty()) {
                         input.error = "Required Field"
-                    } else {
-                        auth.signInWithEmailAndPassword(userEmail, userPassword)
-                            .addOnCompleteListener(this, OnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                    Toast.makeText(
-                                        this,
-                                        "Account Created successfully",
-                                        Toast.LENGTH_LONG
-                                    )
-                                        .show()
-                                    val intent = Intent(this, MainActivity::class.java)
-                                    startActivity(intent)
-                                    finish()
-                                } else {
-                                    Toast.makeText(
-                                        this,
-                                        "Failed to authenticate",
-                                        Toast.LENGTH_LONG
-                                    ).show()
-                                }
-                            })
                     }
                 }
-/*
-        textViewLogin.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+                textViewLogin.setOnClickListener {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
 
+                }
+            }
         }
     }
+    private fun notEmpty(): Boolean = editTextName.text.toString().trim().isNotEmpty() &&
+            editTextPhone.text.toString().trim().isNotEmpty()&&
+            editTextEmail.text.toString().trim().isNotEmpty() &&
+            editTextPassword.text.toString().trim().isNotEmpty()
 
+/*
         override fun onStart() {
             super.onStart()
             val user: FirebaseUser? = firebaseAuth.currentUser
@@ -82,6 +88,7 @@ class registrationActivity : AppCompatActivity() {
                 toast("Welcome!")
             }
         }
+
     private fun notEmpty(): Boolean = editTextName.text.toString().trim().isNotEmpty() &&
             editTextPhone.text.toString().trim().isNotEmpty()&&
         editTextEmail.text.toString().trim().isNotEmpty() &&
@@ -234,6 +241,4 @@ class registrationActivity : AppCompatActivity() {
             }
         }*/
         }
-    }
-}
 
