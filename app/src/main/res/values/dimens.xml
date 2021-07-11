@@ -55,6 +55,9 @@
 
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="dp_350">350dp</dimen>
+    <dimen name="dp_140">140dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_150">150dp</dimen>
 
 
 </resources>

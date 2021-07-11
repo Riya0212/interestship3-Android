@@ -31,7 +31,7 @@
         android:src="@drawable/download"
 
        app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
-        android:id="@+id/imgdoctorphoto_history"
+        android:id="@+id/imgdoctorphoto_history_doctor"
         android:layout_height="@dimen/dp_60">
 
     </de.hdodenhof.circleimageview.CircleImageView>
@@ -62,7 +62,7 @@
         android:textStyle="bold"
         android:textColor="@color/blue2"
         android:text="HeadAche and fever"
-        android:id="@+id/txtreason_history"
+        android:id="@+id/txtreason_history_doctor"
         app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
         app:layout_constraintTop_toBottomOf="@id/txtcategoryOfDoctor_history"
         app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"

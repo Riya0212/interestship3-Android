@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wecure.patient.*
 import com.wecure.patient.databinding.FragmentHomeBinding
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.fragment_home_doctor.*
 import java.lang.Exception
 
@@ -86,7 +84,7 @@ class HomeFragment_Doctor : Fragment() {
         postToListAppointmentReq_doctor()
         postToListHistory_doctor()
         recycler_newreq_Doctors.layoutManager=LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
-        recycler_newreq_Doctors.adapter=ApoointmentReqRecyclerAdapter(namePatientList_doctor,datePateientList_doctor,profilePatientList_doctor)
+        recycler_newreq_Doctors.adapter=ApoointmentReqRecyclerAdapter(dataAppointmentReq,namePatientList_doctor,datePateientList_doctor,profilePatientList_doctor)
         recyclerHistory_doctor.layoutManager= LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
         recyclerHistory_doctor.adapter=HistoryDoctorRecyclerAdapter(nameListHistory_doctor,reasonListHistory_doctor,profileListHistory_doctor,dateListHistory_doctor)
 

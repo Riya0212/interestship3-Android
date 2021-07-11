@@ -9,7 +9,12 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 
-class ApoointmentReqRecyclerAdapter(private var name:List<String>, private var date:List<String>, private var profile:List<Int>):
+class ApoointmentReqRecyclerAdapter(
+    private var dataAppointmentReq: ArrayList<AppointmentReqModel>,
+    private var name: List<String>,
+    private var date: List<String>,
+    private var profile: List<Int>
+):
     RecyclerView.Adapter<ApoointmentReqRecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,21 +34,21 @@ class ApoointmentReqRecyclerAdapter(private var name:List<String>, private var d
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_doctor_recycler_view, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_doctor_recycler_view_doctor, parent, false)
         return ViewHolder(v)
     }
 
     override fun getItemCount(): Int {
-        return profile.size
+        return dataAppointmentReq.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemname.text = name[position]
-        holder.itemdate.text=date[position]
-        holder.itemprofile.setImageResource(profile[position])
+        holder.itemname.text = dataAppointmentReq[position].name
+        holder.itemdate.text=dataAppointmentReq[position].date
+        holder.itemprofile.setImageResource(dataAppointmentReq[position].image)
         val context=holder.itembtn.context
         holder.itembtn.setOnClickListener {
-            val intent = Intent( context, Appointment::class.java)
+            val intent = Intent( context, AppointmentDetail::class.java)
             context.startActivity(intent)
         }
 

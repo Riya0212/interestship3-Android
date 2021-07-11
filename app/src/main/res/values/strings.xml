@@ -51,6 +51,10 @@
     <string name="label_already_have_an_account">Already have an account?</string>
     <string name="label_login_using_email_and_password">Login using email and password</string>
     <string name="label_new_account">New account</string>
+    <string name="label_give_a_feedback">Give a Feedback</string>
+    <string name="label_dummy_intro">What is Lorem Ipsum Lorem Ipsum fdksjkfjkdsfjdsfkdsksdkjnskgnsdkgnksdngkdsngksjgnkdsnjksfnksgksgkfdngjdfbgjsfbjsfbjsbjfbjsbjsfb is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</string>
+    <string name="label_dr_riya_patel">Dr.Riya Patel</string>
+    <string name="label_reason_for_appointment">Reason for Appointment</string>
 
     <string name="don_t_have_an_account" tools:ignore="StringEscaping">Dont have an account?</string>
     <string name="forgot_password">Forgot password?</string>

@@ -10,14 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 class HistoryDoctorRecyclerAdapter(private var namehistory:List<String>, private var reasonhistory:List<String>, private var profilehistory:List<Int>, private var datehistory:List<String>):
         RecyclerView.Adapter<HistoryDoctorRecyclerAdapter.ViewHolder>(){
             inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-                val itemnameHistory:TextView = itemView.findViewById(R.id.txtNameOfpatient_doctor)
-                val itemreasonHistory:TextView=itemView.findViewById(R.id.txtreason_history)
-                val itemprofileHistory:ImageView=itemView.findViewById(R.id.imgdoctorphoto_history)
-                val itemdateHistory:TextView=itemView.findViewById(R.id.txtdate_history_doctor)
+                val itemnameHistory:TextView = itemView.findViewById(R.id.txtNameOfDoctor_history)!!
+                val itemreasonHistory:TextView=itemView.findViewById(R.id.txtreason_history_doctor)!!
+                val itemprofileHistory:ImageView=itemView.findViewById(R.id.imgdoctorphoto_history_doctor)!!
+                val itemdateHistory:TextView=itemView.findViewById(R.id.txtdate_history_doctor)!!
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_history_recycler_view, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_history_recycler_view_doctor, parent, false)
         return ViewHolder(v)
     }
 
@@ -29,7 +29,7 @@ class HistoryDoctorRecyclerAdapter(private var namehistory:List<String>, private
     }
 
     override fun getItemCount(): Int {
-        return  profilehistory.size
+        return  namehistory.size
     }
 }
 

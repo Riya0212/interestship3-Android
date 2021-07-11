@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".SelectCategory"></activity>
+        <activity android:name=".BookAgain"></activity>
+        <activity android:name=".SelectCategory" />
         <activity android:name=".feedback_recycler_view" />
-        <activity android:name=".Feedback"></activity>
+        <activity android:name=".Feedback" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +32,9 @@
         <activity android:name=".forgetPassword_activity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".registrationActivity" />
+        <activity android:name=".HomeScreen_Doctor" />
+        <activity android:name=".HistoryDoctorRecyclerView"></activity>
+        <activity android:name=".AppointmentDetail" />
     </application>
 
 </manifest>

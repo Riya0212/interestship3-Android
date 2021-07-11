@@ -7,6 +7,17 @@
     android:background="@drawable/rectgradient"
     android:id="@+id/layoutContactusContainer"
     tools:context=".ContactUs">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/id_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </ImageView>
     <ImageView
         android:layout_width="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

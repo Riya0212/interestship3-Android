@@ -8,19 +8,19 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.wecure.patient.databinding.ActivityHomeScreenBinding
+import com.wecure.patient.databinding.ActivityHomeScreenDoctorBinding
 import com.wecure.patient.ui.dashboard.DashboardFragment_Doctor
 import com.wecure.patient.ui.home.HomeFragment_Doctor
 
 class HomeScreen_Doctor : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomeScreenBinding
+    private lateinit var binding: ActivityHomeScreenDoctorBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
 
-        binding = ActivityHomeScreenBinding.inflate(layoutInflater)
+        binding = ActivityHomeScreenDoctorBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val homefragment_doctor = HomeFragment_Doctor()
         val profilefragment_doctor = DashboardFragment_Doctor()
