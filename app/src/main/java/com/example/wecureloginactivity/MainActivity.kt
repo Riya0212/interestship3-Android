@@ -7,119 +7,110 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.wecure.patient.Extensions.toast
-import com.wecure.patient.FireBaseUtils.firebaseAuth
-import com.wecure.patient.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.editTextEmail
+import kotlinx.android.synthetic.main.activity_main.editTextPassword
+
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var signInEmail: String
-    lateinit var signInPassword: String
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
     lateinit var signInInputsArray: Array<EditText>
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide() //hide actionbar
         super.onCreate(savedInstanceState)
-        binding= ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
+        auth = Firebase.auth
+
+
         signInInputsArray = arrayOf(editTextEmail, editTextPassword)
 
 
-        binding.textViewSignup.setOnClickListener {
-            val intent = Intent(this, registrationActivity::class.java)
-            startActivity(intent)
-        }
-        binding.btnLogin.setOnClickListener {
+        textViewSignup.setOnClickListener {
 
-            isValidate()
+            startActivity(Intent(this,registrationActivity::class.java))
+            finish()
         }
-        binding.textViewForgot.setOnClickListener{
+        btnLogin.setOnClickListener {
+
+            doLogin()
+        }
+        textViewForgot.setOnClickListener{
             val intent= Intent(this,forgetPassword_activity::class.java)
             startActivity(intent)
         }
 
     }
-    private fun notEmpty(): Boolean = signInEmail.isNotEmpty() && signInPassword.isNotEmpty()
 
-    private fun isValidate(){
-        signInEmail = editTextEmail.text.toString().trim()
-        signInPassword = editTextPassword.text.toString().trim()
-        if (notEmpty()) {
-            firebaseAuth.signInWithEmailAndPassword(signInEmail,signInPassword)
-                .addOnCompleteListener { signIn ->
-                    if (signIn.isSuccessful) {
-                        startActivity(Intent(this, registrationActivity::class.java))
-                        toast("signed in successfully")
-                        finish()
-                    } else {
-                        toast("sign in failed")
-                    }
-                }
-        }
-        else {
+    private fun doLogin() {
+        if(editTextEmail.text.toString().isEmpty() || editTextPassword.text.toString().isEmpty()) {
             signInInputsArray.forEach { input ->
                 if (input.text.toString().trim().isEmpty()) {
                     input.error = "Required Field"
-                       // "${input.hint} is required"
+                    return
+                }
+
+            }
+        }
+        if(!FieldValidators.isValidEmail(editTextEmail.text.toString())) {
+            editTextEmail.error = "Invalid Email!"
+            editTextEmail.requestFocus()
+        }
+        auth.signInWithEmailAndPassword(editTextEmail.text.toString(), editTextPassword.text.toString())
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    updateUI(user)
+                } else {
+                    updateUI(null)
                 }
             }
     }
 
-/*
-//validation check for username
-    private fun validateEmail(): Boolean {
-        if (binding.editTextEmail.text.toString().trim()) {
-            binding.editTextEmail.error = "Required Field!"
-            binding.editTextEmail.requestFocus()
-            return false
-        } else if (!isValidEmail(binding.editTextEmail.text.toString())) {
-            binding.editTextEmail.error = "Invalid Email!"
-            binding.editTextEmail.requestFocus()
-            return false
-        } else {
-            binding.emailLayout.isErrorEnabled = false
+
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            reload();
         }
-        return true
     }
-//validation check for password
-    private fun validatePassword(): Boolean{
-        if(binding.editTextPassword.text.toString().trim().isEmpty()){
-            binding.editTextPassword.error="Required Field!"
-            binding.editTextPassword.requestFocus()
-            return false
-        }
-        else {
-            binding.passwordLayout.isErrorEnabled = false
-        }
-    return true
+
+    private fun reload() {
     }
-    //private val textWatcher= object : TextWatcher{
-    inner class TextFieldValidation(private val view: View) : TextWatcher {
-        override fun afterTextChanged(s: Editable?) {
 
-        }
+    private fun updateUI(currentUser: FirebaseUser?) {
 
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        if(currentUser !=null) {
+            if (currentUser.isEmailVerified) {
+                startActivity(Intent(this, userProfile::class.java))
+                finish()
+            } else {
 
-        }
-
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            //check ids of each textfield and apply functions accordigly
-            when (view.id){
-                R.id.editTextEmail-> {
-                    validateEmail()
-                }
-                R.id.editTextPassword->{
-                    validatePassword()
-                }
+                Toast.makeText(
+                    baseContext, "Please verify your email",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
-        }*/
+        }
+            else{
+                Toast.makeText(
+                    baseContext, "Login failed",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+
     }
 
-}
+
 
 
 
