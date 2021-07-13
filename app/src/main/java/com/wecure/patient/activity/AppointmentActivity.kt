@@ -1,12 +1,14 @@
-package com.wecure.patient
+package com.wecure.patient.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
+import com.wecure.patient.HomeScreen
+import com.wecure.patient.R
 
-class Appointment : AppCompatActivity() {
+class AppointmentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_appointment)

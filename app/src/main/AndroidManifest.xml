@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Appointment" />
+        <activity android:name=".activity.AppointmentActivity" />
         <activity android:name=".DoctorDetail" />
         <activity android:name=".ContactUs" />
         <activity android:name=".HistoryRecyclerView" />

@@ -17,21 +17,30 @@ class SelectCategory : AppCompatActivity() {
         val img_patient:CircleImageView = findViewById(R.id.img_cat_patient)
         val btn_next:FloatingActionButton =findViewById(R.id.fabnext)
         var flag:Boolean=false
+        var catSelected = " "
+        val bundle = Bundle()
+
+
+
         img_doctor.setOnClickListener {
             img_patient.setCircleBackgroundColorResource(R.color.blue3)
             img_doctor.setCircleBackgroundColorResource(R.color.pink)
+            catSelected="doctor"
+
             flag=true
         }
         img_patient.setOnClickListener {
             img_doctor.setCircleBackgroundColorResource(R.color.blue3)
             img_patient.setCircleBackgroundColorResource(R.color.pink)
+            catSelected="patient"
             flag=true
         }
 
         btn_next.setOnClickListener{
             if(flag){
+                bundle.putString(getString(R.string.bundle_category), catSelected)
                 val intent = Intent(this, MainActivity::class.java)
-
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
             else{

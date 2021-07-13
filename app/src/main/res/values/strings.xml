@@ -96,4 +96,13 @@
     <string name="label_new_password">New Password</string>
     <string name="label_confirm_password">Confirm Password</string>
     <string name="label_set">Set</string>
+    <string name="account_created_successfully">Account created successfully</string>
+    <string name="signup_failed">Signup failed.Try Again</string>
+    <string name="length_less_than_8">password can\'t be less than 8 digits</string>
+    <string name="length_greater_than_10">Number cannot be greater than 10 digits</string>
+    <string name="required_1_digit">Required at least 1 digit</string>
+    <string name="must_contain_upper_lower">Password must contain upper and lower case letters</string>
+    <string name="invald_email">Invalid Email!</string>
+    <string name="special_character_required">Required atleast 1 special character</string>
+    <string name="bundle_category">category</string>
 </resources>

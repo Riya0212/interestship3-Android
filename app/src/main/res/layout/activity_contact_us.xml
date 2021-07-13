@@ -60,7 +60,8 @@
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/dp_10"
+        app:layout_constraintGuide_percent="0.95"
+        app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/guidelineend"
         android:layout_height="wrap_content">
 
@@ -124,7 +125,6 @@
             android:hint="@string/name_contact_us"
             app:startIconDrawable="@drawable/ic_baseline_person_24"
             android:textColorHint="@color/blue3"
-
             app:hintAnimationEnabled="true"
             app:startIconTint="@color/blue2"
             app:boxStrokeWidth="0dp"

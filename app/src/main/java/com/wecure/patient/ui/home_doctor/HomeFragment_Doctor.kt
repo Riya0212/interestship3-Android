@@ -84,7 +84,7 @@ class HomeFragment_Doctor : Fragment() {
         postToListAppointmentReq_doctor()
         postToListHistory_doctor()
         recycler_newreq_Doctors.layoutManager=LinearLayoutManager(this.context,RecyclerView.HORIZONTAL,false)
-        recycler_newreq_Doctors.adapter=ApoointmentReqRecyclerAdapter(dataAppointmentReq,namePatientList_doctor,datePateientList_doctor,profilePatientList_doctor)
+        recycler_newreq_Doctors.adapter=ApointmentReqRecyclerAdapter(dataAppointmentReq,namePatientList_doctor,datePateientList_doctor,profilePatientList_doctor)
         recyclerHistory_doctor.layoutManager= LinearLayoutManager(this.context,RecyclerView.VERTICAL,false)
         recyclerHistory_doctor.adapter=HistoryDoctorRecyclerAdapter(nameListHistory_doctor,reasonListHistory_doctor,profileListHistory_doctor,dateListHistory_doctor)
 

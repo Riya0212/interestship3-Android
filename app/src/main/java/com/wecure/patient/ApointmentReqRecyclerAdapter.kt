@@ -9,13 +9,13 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 
-class ApoointmentReqRecyclerAdapter(
+class ApointmentReqRecyclerAdapter(
     private var dataAppointmentReq: ArrayList<AppointmentReqModel>,
-    private var name: List<String>,
+  /*  private var name: List<String>,
     private var date: List<String>,
-    private var profile: List<Int>
+    private var profile: List<Int>*/
 ):
-    RecyclerView.Adapter<ApoointmentReqRecyclerAdapter.ViewHolder>() {
+    RecyclerView.Adapter<ApointmentReqRecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemname: TextView = itemView.findViewById(R.id.txtNameOfpatient_doctor)!!
