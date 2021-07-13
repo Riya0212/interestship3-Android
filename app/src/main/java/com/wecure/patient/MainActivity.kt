@@ -8,14 +8,22 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.wecure.patient.FieldValidators.isValidEmail
 import com.wecure.patient.databinding.ActivityMainBinding
-
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
+    lateinit var signInInputsArray: Array<EditText>
 
 
     @SuppressLint("SetTextI18n")
@@ -26,26 +34,88 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        setupListeners()
+        //setupListeners()
+        auth = Firebase.auth
 
-        binding.textViewSignup.setOnClickListener {
-            val intent = Intent(this, registrationActivity::class.java)
-            startActivity(intent)
+
+        signInInputsArray = arrayOf(editTextEmail, editTextPassword)
+
+
+        textViewSignup.setOnClickListener {
+
+            startActivity(Intent(this,registrationActivity::class.java))
+            finish()
         }
-        binding.textViewForgot.setOnClickListener{
+        btnLogin.setOnClickListener {
+
+            doLogin()
+        }
+        textViewForgot.setOnClickListener{
             val intent= Intent(this,forgetPassword_activity::class.java)
             startActivity(intent)
         }
 
-        binding.btnLogin.setOnClickListener {
-            val intent= Intent(this,HomeScreen_Doctor::class.java)
-            startActivity(intent)
-        }
-
-
 
 
     }
+    private fun doLogin() {
+        if(editTextEmail.text.toString().isEmpty() || editTextPassword.text.toString().isEmpty()) {
+            signInInputsArray.forEach { input ->
+                if (input.text.toString().trim().isEmpty()) {
+                    input.error = "Required Field"
+                    return
+                }
+
+            }
+        }
+        if(!FieldValidators.isValidEmail(editTextEmail.text.toString())) {
+            editTextEmail.error = "Invalid Email!"
+            editTextEmail.requestFocus()
+        }
+        auth.signInWithEmailAndPassword(editTextEmail.text.toString(), editTextPassword.text.toString())
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    updateUI(user)
+                } else {
+                    updateUI(null)
+                }
+            }
+    }
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            reload();
+        }
+    }
+
+    private fun reload() {
+    }
+
+    private fun updateUI(currentUser: FirebaseUser?) {
+
+        if(currentUser !=null) {
+            if (currentUser.isEmailVerified) {
+                startActivity(Intent(this, userProfile::class.java))
+                finish()
+            } else {
+
+                Toast.makeText(
+                    baseContext, "Please verify your email",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+        else{
+            Toast.makeText(
+                baseContext, "Login failed",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+/*
     private fun isValidate(): Boolean= validateEmail() && validatePassword()
 
     private fun setupListeners(){
@@ -68,9 +138,9 @@ class MainActivity : AppCompatActivity() {
             binding.emailLayout.isErrorEnabled = false
         }
         return true
-    }
+    }*/
     //validation check for password
-    private fun validatePassword(): Boolean{
+/*    private fun validatePassword(): Boolean{
         if(binding.editTextPassword.text.toString().trim().isEmpty()){
             binding.editTextPassword.error="Required Field!"
             binding.editTextPassword.requestFocus()
@@ -80,8 +150,8 @@ class MainActivity : AppCompatActivity() {
             binding.passwordLayout.isErrorEnabled = false
         }
         return true
-    }
-    //private val textWatcher= object : TextWatcher{
+    }*/
+    /*//private val textWatcher= object : TextWatcher{
     inner class TextFieldValidation(private val view: View) : TextWatcher {
         override fun afterTextChanged(s: Editable?) {
 
@@ -102,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
+    }*/
 
 }
 

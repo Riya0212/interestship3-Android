@@ -8,6 +8,7 @@ import com.wecure.patient.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.activity_feedback.*
 
 class Feedback : AppCompatActivity() {
+
     private var nameFeedbackList = mutableListOf<String>()
     private var rateFeedbackList = mutableListOf<Float>()
     private var descFeedbackList = mutableListOf<String>()

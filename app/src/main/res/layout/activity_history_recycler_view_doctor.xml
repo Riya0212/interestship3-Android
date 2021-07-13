@@ -20,9 +20,10 @@
 
     app:layout_constraintEnd_toEndOf="parent"
     android:layout_height="wrap_content">
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
         android:layout_width="match_parent"
         android:padding="@dimen/dp_7"
+        android:id="@+id/container_history_linear"
         android:layout_height="match_parent">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -43,7 +44,7 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:text="@string/hrishita_mavani"
-        android:id="@+id/txtNameOfDoctor_history"
+        android:id="@+id/txtNameOfDoctor_history_doctor"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_12"
@@ -109,6 +110,6 @@ android:layout_gravity="center"
 </LinearLayout>
 
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
