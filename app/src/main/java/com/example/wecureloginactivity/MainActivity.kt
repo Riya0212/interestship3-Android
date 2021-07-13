@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         }
             else{
                 Toast.makeText(
-                    baseContext, "Login failed",
+                    baseContext, "Invalid email or password.",
                     Toast.LENGTH_SHORT
                 ).show()
             }

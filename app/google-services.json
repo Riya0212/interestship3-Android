@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "250390340275",
+    "project_id": "wecure-bab12",
+    "storage_bucket": "wecure-bab12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250390340275:android:287de62b5bc39f30e386c6",
+        "android_client_info": {
+          "package_name": "com.wecure.patient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250390340275-gk62k5p3ju98vqu9lnqk38oavlfm8rjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR6LVuLMNGN9MUAtH4nFEuy9BL5i7Ewso"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250390340275-gk62k5p3ju98vqu9lnqk38oavlfm8rjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
