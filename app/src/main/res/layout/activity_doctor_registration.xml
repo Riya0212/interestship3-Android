@@ -123,7 +123,7 @@
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
         app:layout_constraintTop_toBottomOf="@+id/textViewName"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin">
@@ -163,7 +163,7 @@
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:endIconMode="clear_text"
         app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -201,7 +201,7 @@
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
         app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin">
@@ -238,7 +238,7 @@
         android:layout_height="@dimen/dp_32"
         app:errorEnabled="true"
         app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
         app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
@@ -290,11 +290,11 @@
         android:layout_height="@dimen/dp_32"
         app:errorEnabled="true"
         app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
         app:layout_constraintTop_toBottomOf="@+id/textViewSpecialization"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
-        app:passwordToggleEnabled="true">
+       >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextDoctorSpecialization"
             android:layout_width="match_parent"

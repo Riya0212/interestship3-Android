@@ -2,6 +2,7 @@ package com.wecure.patient.ui.dashboard
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserInfo
 import com.google.firebase.auth.ktx.auth
@@ -22,11 +24,13 @@ import com.wecure.patient.HomeScreen
 import com.wecure.patient.R
 import com.wecure.patient.data.UserInfoData
 import com.wecure.patient.databinding.FragmentDashboardBinding
+import com.wecure.patient.ui.dashboard_doctor.DashboardViewModel_Doctor
 import kotlinx.android.synthetic.main.activity_registration.*
 import kotlinx.android.synthetic.main.fragment_dashboard.view.*
 
 class DashboardFragment : Fragment() {
 
+    private lateinit var txtName: EditText
     private val TYPE_DOCTOR: String = "doctor"
     private val TYPE_PATIENT: String = "patient"
     private lateinit var dashboardViewModel: DashboardViewModel_Doctor
@@ -34,11 +38,6 @@ class DashboardFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private var mFirebaseDatabaseInstances: FirebaseDatabase?=null
     private var mFirebaseDatabase: DatabaseReference?=null
-    private lateinit var editProfileInputArray: Array<EditText>
-    private lateinit var editTextName1: EditText
-    private lateinit var editTextEmail: EditText
-    private lateinit var editTextPhone1: EditText
-    //private lateinit var textName: TextView
 
     private var userId:String?=null
     private var user: UserInfoData?=null
@@ -56,43 +55,32 @@ class DashboardFragment : Fragment() {
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        /*//val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-           // textView.text = it
-        })*/
         val view = inflater!!.inflate(R.layout.fragment_dashboard, container, false)
-       // textName = view.textName
-        editTextName1 = view.findViewById(R.id.editTextNamePatient)
-        editTextPhone1 = view.findViewById(R.id.editTextPhonePatient)
-
-        //editProfileInputArray =
-            //arrayOf(view.editTextName, view.editTextPhone, view.editTextGender, view.editTextBlood,view.editTextWeight,view.editTextHeight)
         mFirebaseDatabaseInstances= FirebaseDatabase.getInstance()
         mFirebaseDatabase=mFirebaseDatabaseInstances!!.getReference("users")
         auth = Firebase.auth
+        val user=FirebaseAuth.getInstance().currentUser
+        userId=user!!.uid
+      // val myUser= UserInfoData(view.editTextNamePatient.text.toString(),view.editTextPhonePatient.text.toString(),view.editTextGenderPatient.text.toString(),view.editTextWeight.text.toString(),view.editTextHeight.text.toString(),view.editTextBloodPatient.text.toString())
 
+        root.btnSubmitProfile?.setOnClickListener {
 
-
-       val buttonSubmit = view.findViewById<Button>(R.id.btnSubmitProfile)
-
-
-            buttonSubmit.setOnClickListener {
-            val user=FirebaseAuth.getInstance().currentUser
-
-
-            val myUser= UserInfoData(view.editTextNamePatient.text.toString(),view.editTextPhonePatient.text.toString(),view.editTextPhonePatient.text.toString(),view.editTextPhonePatient.text.toString(),view.editTextWeight.text.toString(),view.editTextHeight.text.toString())
-            userId=user!!.uid
-            mFirebaseDatabase!!.child(userId!!).setValue(myUser)
-
+            txtName = view?.findViewById<EditText>(R.id.editTextNamePatient)!!
+            //mFirebaseDatabase!!.child(userId!!).setValue(myUser)
+            Log.v("inside","Inside Button code "+(txtName.text.toString()))
+            mFirebaseDatabase!!.child(userId!!).child("name").setValue(view?.editTextNamePatient?.text.toString())
+            mFirebaseDatabase!!.child(userId!!).child("phoneNumber").setValue(view?.editTextPhonePatient?.text.toString())
+            mFirebaseDatabase!!.child(userId!!).child("gender").setValue(view?.editTextGenderPatient?.text.toString())
+            mFirebaseDatabase!!.child(userId!!).child("weight").setValue(view?.editTextWeight?.text.toString())
+            mFirebaseDatabase!!.child(userId!!).child("height").setValue(view?.editTextHeight?.text.toString())
+            mFirebaseDatabase!!.child(userId!!).child("bloodGroup").setValue(view?.editTextBloodPatient?.text.toString())
 
             Toast.makeText(
                 context,
                 getString(R.string.profile_updated),
                 Toast.LENGTH_SHORT
             ).show()
-
-        }
+                   }
 
 
         return root
@@ -104,13 +92,16 @@ class DashboardFragment : Fragment() {
             ?.addOnCompleteListener(OnCompleteListener {
                 if(it.isSuccessful)
                 {
-                    var name : String = it.result?.child("name")?.getValue().toString();
-                    var weight : String = it.result?.child("weight")?.getValue().toString();
-                    var gender : String = it.result?.child("gender")?.getValue().toString();
-                    var phone : String = it.result?.child("phone")?.getValue().toString();
-                    var height:String= it.result?.child("height")?.getValue().toString()
-                    var bloodGroup:String=it.result?.child("bloodgroup")?.getValue().toString()
-                        user = UserInfoData(name, weight, phone, gender,height,bloodGroup)
+                    var name : String = it.result?.child("name")?.value.toString();
+                    var weight : String = it.result?.child("weight")?.value.toString();
+                    var gender : String = it.result?.child("gender")?.value.toString();
+                    var phone : String = it.result?.child("phoneNumber")?.value.toString();
+                    var height:String= it.result?.child("height")?.value.toString()
+                    var bloodGroup:String=it.result?.child("bloodgroup")?.value.toString()
+                    var email:String=it.result?.child("email")?.value.toString()
+                    var category:String =it.result?.child("category")?.value.toString()
+
+                        user = UserInfoData(email,name,category, phone, gender, weight,height,bloodGroup)
                         updateUI()
 
 
@@ -121,7 +112,11 @@ class DashboardFragment : Fragment() {
                 }
             })
     }
+private fun updateData(){
 
+
+
+}
     private fun updateUI() {
         System.out.println("us = " + user?.height+user?.name)
         view?.editTextNamePatient?.setText(user?.name)
@@ -129,14 +124,30 @@ class DashboardFragment : Fragment() {
         if (user?.height=="null"||user?.height==null){
             view?.editTextHeight?.hint = "Enter your height"
         }
-        if (user?.weight=="null"||user?.weight==null){
+        else
+        {
+            view?.editTextHeight?.setText(user?.height)
+        }
+        if (user?.weight==" "||user?.weight==null){
             view?.editTextWeight?.hint = "Enter your weight"
         }
-        if (user?.bloodGroup=="null"||user?.bloodGroup==null){
+        else{
+            view?.editTextWeight?.setText(user?.weight)
+
+        }
+        if (user?.bloodGroup==" "||user?.bloodGroup==null){
             view?.editTextBloodPatient?.hint = "Enter your blood group"
         }
-        if (user?.gender=="null"||user?.gender==null){
+        else
+        {
+            view?.editTextBloodPatient?.setText(user?.bloodGroup)
+        }
+        if (user?.gender==" "||user?.gender==null){
             view?.editTextGenderPatient?.hint = "Enter your gender"
+        }
+        else{
+            view?.editTextGenderPatient?.setText(user?.gender)
+
         }
        // textName.text = user?.name
     }

@@ -100,7 +100,7 @@ class registrationActivity : AppCompatActivity() {
                                 userId=user!!.uid
                                 emailAddress=user.email
 
-                                val myUser=UserInfoData(editTextName.text.toString(),catSelected.toString(),editTextPhone.text.toString(),editTextEmail.text.toString())
+                                val myUser=UserInfoData(editTextEmail.text.toString(),editTextName.text.toString(),catSelected.toString(),editTextPhone.text.toString(),"null","null","null","null")
                                 mFirebaseDatabase!!.child(userId!!).setValue(myUser)
 
 

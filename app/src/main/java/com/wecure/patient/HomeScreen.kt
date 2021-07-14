@@ -10,9 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.wecure.patient.databinding.ActivityHomeScreenBinding
 import com.wecure.patient.ui.dashboard.DashboardFragment
-import com.wecure.patient.ui.dashboard.DashboardFragment_Doctor
 import com.wecure.patient.ui.home.HomeFragment
-import com.wecure.patient.ui.home.HomeFragment_Doctor
 
 class HomeScreen : AppCompatActivity() {
 

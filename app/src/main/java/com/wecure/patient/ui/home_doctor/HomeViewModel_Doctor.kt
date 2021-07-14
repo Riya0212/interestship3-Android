@@ -1,4 +1,4 @@
-package com.wecure.patient.ui.home
+package com.wecure.patient.ui.home_doctor
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

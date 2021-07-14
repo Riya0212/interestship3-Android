@@ -1,4 +1,4 @@
-package com.wecure.patient.ui.dashboard
+package com.wecure.patient.ui.dashboard_doctor
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

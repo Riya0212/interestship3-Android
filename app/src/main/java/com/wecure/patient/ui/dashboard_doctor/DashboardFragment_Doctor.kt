@@ -1,4 +1,4 @@
-package com.wecure.patient.ui.dashboard
+package com.wecure.patient.ui.dashboard_doctor
 
 import android.os.Bundle
 import android.view.LayoutInflater

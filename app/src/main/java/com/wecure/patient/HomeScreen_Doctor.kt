@@ -9,8 +9,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.wecure.patient.databinding.ActivityHomeScreenDoctorBinding
-import com.wecure.patient.ui.dashboard.DashboardFragment_Doctor
-import com.wecure.patient.ui.home.HomeFragment_Doctor
+import com.wecure.patient.ui.dashboard_doctor.DashboardFragment_Doctor
+import com.wecure.patient.ui.home_doctor.HomeFragment_Doctor
 
 class HomeScreen_Doctor : AppCompatActivity() {
 

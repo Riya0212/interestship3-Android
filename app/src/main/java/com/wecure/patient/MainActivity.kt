@@ -134,12 +134,12 @@ class MainActivity : AppCompatActivity() {
 
         if(currentUser !=null) {
             if (currentUser.isEmailVerified) {
-                val user = UserInfoData()
+           //     val user = UserInfoData()
                 mFirebaseDatabase!!.child(userId.toString()).get().addOnCompleteListener(
                     OnCompleteListener {
                         if (it.isSuccessful){
                          Log.v("values ",it.result?.value.toString())
-                            val hashMap: HashMap<String,String> = it.result?.value as HashMap<String, String>
+                             val hashMap: HashMap<String,String> = it.result?.value as HashMap<String, String>
                             if (hashMap.get("category").equals("doctor"))
                             {
                                 startActivity(Intent(this, HomeScreen_Doctor::class.java))

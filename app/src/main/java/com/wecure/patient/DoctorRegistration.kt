@@ -10,6 +10,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import com.wecure.patient.data.DoctorInfoData
 import com.wecure.patient.data.UserInfoData
 import kotlinx.android.synthetic.main.activity_doctor_registration.*
 import kotlinx.android.synthetic.main.activity_registration.*
@@ -104,7 +105,7 @@ class DoctorRegistration : AppCompatActivity() {
                                 userId=user!!.uid
                                 emailAddress=user.email
 
-                                val myUser= UserInfoData(editTextDoctorName.text.toString(),catSelected.toString(),editTextDoctorPhone.text.toString(),editTextDoctorEmail.text.toString(),editTextDoctorSpecialization.text.toString())
+                                val myUser= DoctorInfoData(editTextDoctorName.text.toString(),catSelected.toString(),editTextDoctorPhone.text.toString(),editTextDoctorEmail.text.toString(),editTextDoctorSpecialization.text.toString()," "," "," "," ")
                                 mFirebaseDatabase!!.child(userId!!).setValue(myUser)
 
 
