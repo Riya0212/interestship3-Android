@@ -109,16 +109,11 @@ class registrationActivity : AppCompatActivity() {
                                     getString(R.string.account_created_successfully),
                                     Toast.LENGTH_SHORT
                                 ).show()
-                                if(catSelected.equals("doctor"))
-                                {
-                                    startActivity(Intent(this, HomeScreen_Doctor::class.java))
-                                    finish()
-                                }
-                                else{
+
 
                                     startActivity(Intent(this, HomeScreen::class.java))
                                     finish()
-                                }
+
 
                             }
                         }

@@ -58,10 +58,20 @@ class MainActivity : AppCompatActivity() {
 
         textViewSignup.setOnClickListener {
             bundle.putString(getString(R.string.bundle_category), catSelected)
-            val intent = Intent(this, registrationActivity::class.java)
-            intent.putExtras(bundle)
-            startActivity(intent)
-            finish()
+            if(catSelected.equals("doctor")){
+                val intent = Intent(this, DoctorRegistration::class.java)
+                intent.putExtras(bundle)
+                startActivity(intent)
+                finish()
+            }
+            else
+            {
+                val intent = Intent(this, registrationActivity::class.java)
+                intent.putExtras(bundle)
+                startActivity(intent)
+                finish()
+            }
+
         }
         btnLogin.setOnClickListener {
            /* startActivity(Intent(this,HomeScreen::class.java))

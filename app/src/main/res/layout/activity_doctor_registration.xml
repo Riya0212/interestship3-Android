@@ -268,7 +268,7 @@
         android:background="@drawable/loginbtn_bg"
         android:layout_marginTop="@dimen/sp_10"
         app:backgroundTint="@color/colorDarkBlue"
-        app:layout_constraintTop_toBottomOf="@+id/qualificationlayout2"
+        app:layout_constraintTop_toBottomOf="@+id/specializationlayout2"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"/>
     <com.google.android.material.textview.MaterialTextView
@@ -308,43 +308,7 @@
             tools:ignore="LabelFor" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textViewQualification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Specialization"
-        android:textSize="@dimen/sp_14"
-        android:textColor="@color/colorDarkBlue"
-        android:textColorHighlight="@color/colorDarkBlue"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/sp_10"
-        app:layout_constraintTop_toBottomOf="@+id/specializationlayout2"
-        app:layout_constraintStart_toStartOf="@id/guidelineouter"
-        />
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/qualificationlayout2"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/dp_32"
-        app:errorEnabled="true"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/textViewQualification"
-        app:layout_constraintStart_toStartOf="@id/guidelineouter"
-        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
-        app:passwordToggleEnabled="true">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextDoctorQualification"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_32"
-            android:padding="@dimen/sp_2"
-            android:background="@drawable/input_bg"
 
-            app:layout_constraintTop_toBottomOf="@+id/textViewSpecialization"
-            app:layout_constraintStart_toStartOf="@id/guidelineouter"
-            app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
-            android:importantForAutofill="no"
-            tools:ignore="LabelFor" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewExistingUser"
@@ -378,7 +342,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnSignup"
         />
 
-    <!--<com.google.android.material.imageview.ShapeableImageView
+<com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageBottom1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -388,5 +352,5 @@
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         tools:ignore="ContentDescription" />
--->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
