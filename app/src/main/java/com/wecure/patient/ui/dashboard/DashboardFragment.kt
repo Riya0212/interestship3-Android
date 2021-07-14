@@ -31,18 +31,13 @@ import kotlinx.android.synthetic.main.fragment_dashboard.view.*
 class DashboardFragment : Fragment() {
 
     private lateinit var txtName: EditText
-    private val TYPE_DOCTOR: String = "doctor"
-    private val TYPE_PATIENT: String = "patient"
     private lateinit var dashboardViewModel: DashboardViewModel_Doctor
     private var _binding: FragmentDashboardBinding? = null
     private lateinit var auth: FirebaseAuth
     private var mFirebaseDatabaseInstances: FirebaseDatabase?=null
     private var mFirebaseDatabase: DatabaseReference?=null
-
     private var userId:String?=null
     private var user: UserInfoData?=null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -112,11 +107,7 @@ class DashboardFragment : Fragment() {
                 }
             })
     }
-private fun updateData(){
 
-
-
-}
     private fun updateUI() {
         System.out.println("us = " + user?.height+user?.name)
         view?.editTextNamePatient?.setText(user?.name)

@@ -105,7 +105,7 @@ class DoctorRegistration : AppCompatActivity() {
                                 userId=user!!.uid
                                 emailAddress=user.email
 
-                                val myUser= DoctorInfoData(editTextDoctorName.text.toString(),catSelected.toString(),editTextDoctorPhone.text.toString(),editTextDoctorEmail.text.toString(),editTextDoctorSpecialization.text.toString()," "," "," "," ")
+                                val myUser= DoctorInfoData(editTextDoctorName.text.toString(),catSelected.toString(),editTextDoctorPhone.text.toString(),editTextDoctorEmail.text.toString(),editTextDoctorSpecialization.text.toString()," "," "," ")
                                 mFirebaseDatabase!!.child(userId!!).setValue(myUser)
 
 

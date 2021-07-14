@@ -229,7 +229,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextWeight"
+                android:id="@+id/editTextYears"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_12"
@@ -251,7 +251,7 @@
                 android:textStyle="bold"
                 app:layout_constraintHorizontal_bias="0"
                 android:layout_marginStart="@dimen/dp_5"
-                app:layout_constraintTop_toBottomOf="@id/editTextWeight"
+                app:layout_constraintTop_toBottomOf="@id/editTextYears"
                 android:layout_marginTop="@dimen/sp_5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>

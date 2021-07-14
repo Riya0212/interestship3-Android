@@ -22,7 +22,6 @@ class DoctorInfoData {
         specialization: String,
         gender: String,
         yearsOfExperience: String,
-        address:String,
         introduction: String,
     ){
         this.name=name
@@ -32,7 +31,23 @@ class DoctorInfoData {
         this.category=category
         this.yearsOfExperience=yearsOfExperience
         this.email=email
-        this.address = address
+        this.introduction=introduction
+
+
+    }
+    constructor(
+        name: String,
+        phoneNumber: String,
+        specialization: String,
+        gender: String,
+        yearsOfExperience: String,
+        introduction: String,
+    ){
+        this.name=name
+        this.phoneNumber=phoneNumber
+        this.specialization=specialization
+        this.gender=gender
+        this.yearsOfExperience=yearsOfExperience
         this.introduction=introduction
 
 
