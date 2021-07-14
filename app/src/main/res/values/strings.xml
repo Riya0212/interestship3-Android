@@ -105,4 +105,5 @@
     <string name="invald_email">Invalid Email!</string>
     <string name="special_character_required">Required atleast 1 special character</string>
     <string name="bundle_category">category</string>
+    <string name="profile_updated">profile updated successfully</string>
 </resources>

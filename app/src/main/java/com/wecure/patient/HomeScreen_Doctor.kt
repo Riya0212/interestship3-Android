@@ -54,4 +54,9 @@ class HomeScreen_Doctor : AppCompatActivity() {
             replace(R.id.nav_host_fragment_activity_home_screen_doctor, fragment)
             commit()
         }
+
+    override fun onBackPressed() {
+        super.onBackPressed();
+        finishAffinity(); // or finish();
+    }
 }

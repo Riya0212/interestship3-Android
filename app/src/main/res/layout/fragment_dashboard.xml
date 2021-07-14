@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/dp_10" />
+        app:layout_constraintGuide_percent="0.1" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -118,7 +118,7 @@
                  />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextName"
+                android:id="@+id/editTextNamePatient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_bg"
@@ -141,11 +141,11 @@
                 android:textSize="@dimen/sp_14"
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/sp_5"
-                app:layout_constraintTop_toBottomOf="@id/editTextName"
+                app:layout_constraintTop_toBottomOf="@id/editTextNamePatient"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/editTextPhonePatient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_bg"
@@ -168,11 +168,11 @@
                 app:layout_constraintHorizontal_bias="0"
                 android:layout_marginStart="@dimen/dp_5"
                 android:layout_marginTop="@dimen/sp_5"
-                app:layout_constraintTop_toBottomOf="@id/editTextPhone"
+                app:layout_constraintTop_toBottomOf="@id/editTextPhonePatient"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextGender"
+                android:id="@+id/editTextGenderPatient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_12"
@@ -195,11 +195,11 @@
                 android:layout_marginStart="@dimen/dp_5"
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/sp_5"
-                app:layout_constraintTop_toBottomOf="@id/editTextGender"
+                app:layout_constraintTop_toBottomOf="@id/editTextGenderPatient"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextBlood"
+                android:id="@+id/editTextBloodPatient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/input_bg"
@@ -222,7 +222,7 @@
                 app:layout_constraintHorizontal_bias="0"
                 android:layout_marginStart="@dimen/dp_5"
                 android:layout_marginTop="@dimen/sp_5"
-                app:layout_constraintTop_toBottomOf="@id/editTextBlood"
+                app:layout_constraintTop_toBottomOf="@id/editTextBloodPatient"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.textfield.TextInputEditText
@@ -238,7 +238,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/textViewHeight"
+                android:id="@+id/textViewHeightPatient"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_height"
@@ -261,7 +261,7 @@
                 android:inputType="text"
                 android:textSize="@dimen/sp_12"
                 android:padding="@dimen/sp_5"
-                app:layout_constraintTop_toBottomOf="@id/textViewHeight"
+                app:layout_constraintTop_toBottomOf="@id/textViewHeightPatient"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
             <androidx.appcompat.widget.AppCompatButton
@@ -274,7 +274,7 @@
                 android:textSize="@dimen/sp_12"
                 android:fontFamily="@font/poppinsbold"
                 android:textStyle="bold"
-
+                android:id="@+id/btnSubmitProfile"
                 android:background="@drawable/rounded_corner_button"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/blue1"
