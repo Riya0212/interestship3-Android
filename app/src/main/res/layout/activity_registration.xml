@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registrationActivity">
+    tools:context=".RegistrationActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo"
@@ -115,6 +115,8 @@
         android:layout_height="@dimen/dp_32"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintTop_toBottomOf="@+id/textViewName"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin">
@@ -149,6 +151,8 @@
         android:id="@+id/phoneLayout"
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_32"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintTop_toBottomOf="@+id/textViewPhone"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
@@ -189,6 +193,8 @@
         android:layout_height="@dimen/dp_32"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin">
@@ -224,6 +230,8 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/dp_32"
         app:errorEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"

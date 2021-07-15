@@ -14,7 +14,7 @@ class userProfile : AppCompatActivity() {
         setContentView(R.layout.activity_user_profile)
         btnok.setOnClickListener {
             firebaseAuth.signOut()
-            startActivity(Intent(this, registrationActivity::class.java))
+            startActivity(Intent(this, RegistrationActivity::class.java))
             toast("signed out")
             finish()
         }

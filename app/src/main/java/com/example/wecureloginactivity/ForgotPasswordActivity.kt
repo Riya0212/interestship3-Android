@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_forget_password.*
 
 
 
-class forgetPassword_activity : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var userEmail:String
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +34,8 @@ class forgetPassword_activity : AppCompatActivity() {
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Reset link sent to your email", Toast.LENGTH_LONG)
                                 .show()
+                            startActivity(Intent(this,MainActivity::class.java))
+                            finish()
                         } else {
                             Toast.makeText(this, "Unable to send reset mail", Toast.LENGTH_LONG)
                                 .show()

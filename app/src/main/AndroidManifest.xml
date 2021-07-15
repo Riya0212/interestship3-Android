@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeCureLoginActivity"
         tools:ignore="AllowBackup">
-        <activity android:name=".updatePassword" />
+        <activity android:name="PatientHistoryActivity" />
+        <activity android:name=".UpdatePasswordActivity" />
         <activity android:name=".BookAgain" />
         <activity android:name=".userProfile" />
-        <activity android:name=".forgetPassword_activity" />
+        <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".registrationActivity" />
+        <activity android:name=".RegistrationActivity" />
     </application>
 
 </manifest>

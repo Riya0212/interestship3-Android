@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 import kotlinx.android.synthetic.main.activity_registration.*
@@ -14,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_registration.editTextEmail
 import kotlinx.android.synthetic.main.activity_registration.editTextPassword
 
 
-class registrationActivity : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     private lateinit var createAccountInputsArray: Array<EditText>
@@ -30,6 +31,10 @@ class registrationActivity : AppCompatActivity() {
         btnSignup.setOnClickListener {
 
             signUpUser()
+        }
+        textViewLogin.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
 
     }
@@ -74,6 +79,7 @@ class registrationActivity : AppCompatActivity() {
             editTextPassword.requestFocus()
             return
         }
+
         auth.createUserWithEmailAndPassword(editTextEmail.text.toString(), editTextPassword.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {

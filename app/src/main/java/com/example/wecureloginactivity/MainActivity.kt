@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         textViewSignup.setOnClickListener {
 
-            startActivity(Intent(this,registrationActivity::class.java))
+            startActivity(Intent(this,RegistrationActivity::class.java))
             finish()
         }
         btnLogin.setOnClickListener {
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             doLogin()
         }
         textViewForgot.setOnClickListener{
-            val intent= Intent(this,forgetPassword_activity::class.java)
+            val intent= Intent(this,ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 

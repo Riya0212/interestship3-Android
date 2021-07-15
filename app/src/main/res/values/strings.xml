@@ -45,4 +45,16 @@
     <string name="label_new_password">New Password</string>
     <string name="label_confirm_password">Confirm Password</string>
     <string name="label_set">Set</string>
+    <string name="label_current_password">Current Password</string>
+    <string name="label_patient_details">Patient Details</string>
+    <string name="label_riya_patel">Riya Patel</string>
+    <string name="label_9090245504">9090245504</string>
+    <string name="selected_date">Selected Dt</string>
+    <string name="dsgdsfsgsgs">dsgdsfsgsgs</string>
+    <string name="label_problem">Problem</string>
+    <string name="label_confirm_appointment">Confirm Appointment</string>
+    <string name="label_selected_date">Selected Date</string>
+    <string name="label_a">A+</string>
+    <string name="label_50kg">50kg</string>
+    <string name="label_5_7">5\'7</string>
 </resources>
