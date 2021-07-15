@@ -4,8 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.wecure.patient.activity.AppointmentActivity
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class DoctorDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,5 +27,14 @@ class DoctorDetail : AppCompatActivity() {
             val intent = Intent( this, HomeScreen::class.java)
             startActivity(intent)
         }
+
+
+        val textviewreview:TextView=findViewById(R.id.viewfeedbacklink)
+        textviewreview.setOnClickListener {
+            val intent = Intent(this, Feedback::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

@@ -181,7 +181,7 @@
                     android:id="@+id/txt_doctorIntroDetails"
                     app:layout_constraintStart_toStartOf="@id/innerContainer"
                     app:layout_constraintEnd_toEndOf="@id/innerContainer"
-                    android:text="@string/dummy_intro"
+                    android:text="I am doctor Hrishita. I am an orthopedic."
                   app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroTitle"
                     app:layout_constraintBottom_toTopOf="@id/txt_doctorqualificationTitle"
                     android:textColor="@color/black"

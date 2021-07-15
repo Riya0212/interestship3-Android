@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.wecure.patient.ui.home.HomeFragment_Doctor"
+        android:name="com.wecure.patient.ui.home_doctor.HomeFragment_Doctor"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home_doctor" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.wecure.patient.ui.dashboard.DashboardFragment_Doctor"
+        android:name="com.wecure.patient.ui.dashboard_doctor.DashboardFragment_Doctor"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_dashboard_doctor" />
 

@@ -8,26 +8,26 @@ class DataSource{
             val list = ArrayList<DoctorModel>()
             list.add(
                 DoctorModel(
-                    "1-Hrishita Mavani",
+                    "Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download
                 )
             )
             list.add(
                 DoctorModel(
-                    "2-Hrishita Mavani",
-                    "orthopedic",
-                    R.drawable.download
+                    "Ria",
+                    "Gastroentrologist",
+                    R.drawable.ellipsesampleimage2
                 )
             )
-            list.add(
+           /* list.add(
                 DoctorModel(
-                    "3-Hrishita Mavani",
+                    "abc",
                     "orthopedic",
                     R.drawable.download
                 )
-            )
-            list.add(
+            )*/
+           /* list.add(
                 DoctorModel(
                     "4-Hrishita",
                     "orthopedic surgeon",
@@ -110,7 +110,7 @@ class DataSource{
                     "orthopedic",
                     R.drawable.download
                 )
-            )
+            )*/
             return list
         }
         fun createDataSethistdoc(): ArrayList<HistoryDoctorModel>{
@@ -125,13 +125,13 @@ class DataSource{
             )
             listReqhistdoc.add(
                 HistoryDoctorModel(
-                    "1-Hrishita Mavani",
-                    "head ache and fever",
-                    R.drawable.download,
-                    "10-07-2020"
+                    "Ria",
+                    "fever",
+                    R.drawable.ellipsesampleimage3,
+                    "15-07-2021"
                 )
             )
-            listReqhistdoc.add(
+           /* listReqhistdoc.add(
                 HistoryDoctorModel(
                     "1-Hrishita Mavani",
                     "head ache and fever",
@@ -170,19 +170,33 @@ class DataSource{
                     R.drawable.download,
                     "10-07-2020"
                 )
-            )
+            )*/
         return listReqhistdoc
         }
         fun createDataSetreq(): ArrayList<AppointmentReqModel>{
             val listReq = ArrayList<AppointmentReqModel>()
             listReq.add(
                 AppointmentReqModel(
-                    "1-Hrishita Mavani",
+                    "Hrishita Mavani",
                     "10-07-2020",
                     R.drawable.download
                 )
             )
             listReq.add(
+                AppointmentReqModel(
+                    "Ria",
+                    "15-07-2021",
+                    R.drawable.ellipsesampleimage3
+                )
+            )
+           /* listReq.add(
+                AppointmentReqModel(
+                    "1-Hrishita Mavani",
+                    "10-07-2020",
+                    R.drawable.download
+                )
+            )*/
+           /* listReq.add(
                 AppointmentReqModel(
                     "1-Hrishita Mavani",
                     "10-07-2020",
@@ -231,21 +245,7 @@ class DataSource{
                     R.drawable.download
                 )
             )
-            listReq.add(
-                AppointmentReqModel(
-                    "1-Hrishita Mavani",
-                    "10-07-2020",
-                    R.drawable.download
-                )
-            )
-            listReq.add(
-                AppointmentReqModel(
-                    "1-Hrishita Mavani",
-                    "10-07-2020",
-                    R.drawable.download
-                )
-            )
-
+*/
             return listReq
         }
 
@@ -254,7 +254,7 @@ class DataSource{
             val listHistory = ArrayList<HistoryModel>()
             listHistory.add(
                 HistoryModel(
-                    "1-Hrishita Mavani",
+                    "Hrishita Mavani",
                     "orthopedic",
                     R.drawable.download,
                     "10-05-200"
@@ -263,14 +263,14 @@ class DataSource{
             )
             listHistory.add(
                 HistoryModel(
-                    "2-Hrishita Mavani",
-                    "orthopedic",
-                    R.drawable.download,
+                    "Ria",
+                    "Gastroenterologist",
+                    R.drawable.ellipsesampleimage2,
                     "10-05-200"
                 )
 
             )
-            listHistory.add(
+            /*listHistory.add(
                 HistoryModel(
                     "3-Hrishita Mavani",
                     "orthopedic",
@@ -378,20 +378,28 @@ class DataSource{
                 )
 
             )
-
+*/
             return listHistory
         }
         fun createDataSetFeedBack(): ArrayList<FeedbackModel> {
             val listFeedback = ArrayList<FeedbackModel>()
             listFeedback.add(
                 FeedbackModel(
-                    "1-Hrishita Mavani",
+                    "Hrishita",
                     "Very Nice Treatment",
                     1.2f,
                 )
 
             )
             listFeedback.add(
+                FeedbackModel(
+                    "Ria",
+                    "good",
+                    1.2f,
+                )
+
+            )
+          /*  listFeedback.add(
                 FeedbackModel(
                     "1-Hrishita Mavani",
                     "Very Nice Treatment",
@@ -454,15 +462,7 @@ class DataSource{
                     1.2f,
                 )
 
-            )
-            listFeedback.add(
-                FeedbackModel(
-                    "1-Hrishita Mavani",
-                    "Very Nice Treatment",
-                    1.2f,
-                )
-
-            )
+            )*/
 
             return listFeedback
         }

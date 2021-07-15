@@ -157,8 +157,8 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_doctorreason"
             android:layout_width="0dp"
-            android:layout_height="@dimen/dp_140"
-            android:text="@string/label_dummy_intro"
+            android:layout_height="wrap_content"
+            android:text="Fever with cold"
             android:textColor="@color/colorBlack"
             android:fontFamily="@font/poppinsregular"
             android:textSize="13sp"
