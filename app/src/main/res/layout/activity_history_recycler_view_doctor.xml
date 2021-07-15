@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:id="@+id/layoutcontainerhistory"
+    android:layout_height="wrap_content"
+    tools:context=".HistoryDoctorRecyclerView">
+
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:backgroundTint="@color/blue3"
+    app:cardCornerRadius="@dimen/dp_7"
+    app:cardElevation="@dimen/dp_3"
+    card_view:cardUseCompatPadding="true"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_7"
+        android:id="@+id/container_history_linear"
+        android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp_60"
+        android:padding="@dimen/dp_3"
+        android:src="@drawable/download"
+
+       app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
+        android:id="@+id/imgdoctorphoto_history_doctor"
+        android:layout_height="@dimen/dp_60">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:text="@string/hrishita_mavani"
+        android:id="@+id/txtNameOfDoctor_history_doctor"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingStart="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
+        android:fontFamily="@font/poppinssemibold"
+        app:layout_constraintTop_toBottomOf="@+id/imgdoctorphoto_history"
+        app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/blue2"
+        android:text="HeadAche and fever"
+        android:id="@+id/txtreason_history_doctor"
+        app:layout_constraintEnd_toEndOf="@id/guidelinecardendouter"
+        app:layout_constraintTop_toBottomOf="@id/txtcategoryOfDoctor_history"
+        app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
+        android:textSize="@dimen/sp_10"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_height="wrap_content">
+
+
+    </com.google.android.material.textview.MaterialTextView>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+          android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="@dimen/dp_15"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        android:id="@+id/imgdate_history"
+        app:layout_constraintTop_toBottomOf="@id/txtcategoryOfDoctor_history"
+android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="@id/guidelinecardstartouter"
+        android:layout_height="@dimen/dp_15">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:id="@+id/txtdate_history_doctor"
+        app:layout_constraintTop_toBottomOf="@id/imgdate_history"
+        android:text="@string/date"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:textSize="@dimen/dp_10"
+        android:textColor="@color/blue2"
+        android:layout_height="wrap_content"
+
+        >
+    </com.google.android.material.textview.MaterialTextView>
+</LinearLayout>
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

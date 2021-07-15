@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrationActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/id_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        android:background="@drawable/ic_group_25logo"
+        android:src="@drawable/ic_group_25logo"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineright"
+        app:layout_constraintStart_toStartOf="@id/guidelineleft"
+        app:layout_constraintTop_toTopOf="@id/guidelinetop"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinetop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinebottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineouterin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <View
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_bg"
+        android:layout_marginTop="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@id/guidelinebottom"
+        app:layout_constraintEnd_toEndOf="@id/guidelineright"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineleft"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@id/guidelineinner"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewmess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sp_30"
+        android:text="@string/label_signup_using_your_details"
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/guidelineinner"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_name"
+        android:layout_marginTop="@dimen/sp_10"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHighlight="@color/colorDarkBlue"
+        app:layout_constraintTop_toBottomOf="@+id/textViewmess"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_32"
+        app:endIconMode="clear_text"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:padding="@dimen/sp_2"
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_phone_number"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/sp_10"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHighlight="@color/colorDarkBlue"
+        app:layout_constraintTop_toBottomOf="@+id/nameLayout"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_32"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhone"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:inputType="phone"
+        android:padding="@dimen/sp_2"
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhone"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_email1"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHighlight="@color/colorDarkBlue"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/sp_10"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLayout"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_32"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:padding="@dimen/sp_2"
+        android:background="@drawable/input_bg"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_password1"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHighlight="@color/colorDarkBlue"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/sp_10"
+        app:layout_constraintTop_toBottomOf="@+id/emailLayout2"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+       />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_32"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="@dimen/dp_0"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        app:passwordToggleEnabled="true">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:padding="@dimen/sp_2"
+        android:background="@drawable/input_bg"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_signup1"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/colorWhite"
+        android:textColorHighlight="@color/colorWhite"
+        android:background="@drawable/loginbtn_bg"
+        android:layout_marginTop="@dimen/sp_10"
+        app:backgroundTint="@color/colorDarkBlue"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout2"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewExistingUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:text="@string/label_already_have_an_account"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:textColorHighlight="@color/colorWhite"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toStartOf="@id/textViewLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewExistingUser"
+        android:text="@string/label_login"
+        android:layout_marginTop="10dp"
+       android:textSize="@dimen/sp_12"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="@dimen/dp_4"
+        android:textColorHighlight="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/textViewExistingUser"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignup"
+         />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageBottom1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ic_group_26sign_vector"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExistingUser"
+        app:layout_constraintStart_toStartOf="@id/guidelineouter"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
