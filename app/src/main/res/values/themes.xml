@@ -1,5 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+    <style name="Theme.WeCureLoginActivity" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_1</item>
+        <item name="colorPrimaryDark">@color/blue_1</item>
+        <item name="colorAccent">@color/blue_5</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.WeCureLoginActivity.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.WeCureLoginActivity.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.WeCureLoginActivity.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+=======
     <style name="Theme.WecureDoctor" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue3</item>
@@ -14,5 +32,5 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
+n
 </resources>

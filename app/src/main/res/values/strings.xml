@@ -1,4 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="label_app_name">weCureLoginActivity</string>
+=======
     <string name="app_name">WecurePatient</string>
     <string name="title_activity_home_screen">MainActivity</string>
     <string name="title_home">Home</string>
@@ -36,6 +39,7 @@
     <string name="mention_your_problem">Mention your Problem</string>
     <string name="share_your_details_with_doctor">share your details with doctor</string>
 
+
     <string name="label_email">Email</string>
     <string name="label_password">Password</string>
     <string name="label_forgot_password">Forgot Password?</string>
@@ -51,11 +55,15 @@
     <string name="label_already_have_an_account">Already have an account?</string>
     <string name="label_login_using_email_and_password">Login using email and password</string>
     <string name="label_new_account">New account</string>
+
+    <string name="app_name">WE CURE</string>
+=======
     <string name="label_give_a_feedback">Give a Feedback</string>
     <string name="label_dummy_intro">What is Lorem Ipsum Lorem Ipsum fdksjkfjkdsfjdsfkdsksdkjnskgnsdkgnksdngkdsngksjgnkdsnjksfnksgksgkfdngjdfbgjsfbjsfbjsbjfbjsbjsfb is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</string>
     <string name="label_dr_riya_patel">Dr.Riya Patel</string>
     <string name="label_reason_for_appointment">Reason for Appointment</string>
     <string name="label_send_the_verification_link">Send the verification link</string>
+
 
     <string name="don_t_have_an_account" tools:ignore="StringEscaping">Dont have an account?</string>
     <string name="forgot_password">Forgot password?</string>
@@ -76,6 +84,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="label_dr_riya_patel">Dr.Riya Patel</string>
+    <string name="label_reason_for_appointment">Reason for Appointment</string>
+    <string name="label_give_a_feedback">Give a Feedback</string>
+    <string name="label_dummy_intro">What is Lorem Ipsum Lorem Ipsum fdksjkfjkdsfjdsfkdsksdkjnskgnsdkgnksdngkdsngksjgnkdsnjksfnksgksgkfdngjdfbgjsfbjsfbjsbjfbjsbjsfb is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?</string>
+    <string name="label_ok">OK</string>
+    <string name="label_send_the_verification_link">Send the verification link</string>
+=======
     <string name="_3_5">3.5</string>
     <string name="very_nice_doctor">Very nice doctor</string>
     <string name="are_you_a_doctor_or_a_patient">Are You a Doctor or a Patient?</string>
@@ -92,10 +108,25 @@
     <string name="blood_group">Blood Group</string>
     <string name="specialization">Specialization</string>
     <string name="hey_doctor">Hey Doctor</string>
+
     <string name="label_reset_password">Reset Password</string>
     <string name="label_new_password">New Password</string>
     <string name="label_confirm_password">Confirm Password</string>
     <string name="label_set">Set</string>
+
+    <string name="label_current_password">Current Password</string>
+    <string name="label_patient_details">Patient Details</string>
+    <string name="label_riya_patel">Riya Patel</string>
+    <string name="label_9090245504">9090245504</string>
+    <string name="selected_date">Selected Dt</string>
+    <string name="dsgdsfsgsgs">dsgdsfsgsgs</string>
+    <string name="label_problem">Problem</string>
+    <string name="label_confirm_appointment">Confirm Appointment</string>
+    <string name="label_selected_date">Selected Date</string>
+    <string name="label_a">A+</string>
+    <string name="label_50kg">50kg</string>
+    <string name="label_5_7">5\'7</string>
+=======
     <string name="account_created_successfully">Account created successfully</string>
     <string name="signup_failed">Signup failed.Try Again</string>
     <string name="length_less_than_8">password can\'t be less than 8 digits</string>
@@ -106,4 +137,5 @@
     <string name="special_character_required">Required atleast 1 special character</string>
     <string name="bundle_category">category</string>
     <string name="profile_updated">profile updated successfully</string>
+
 </resources>

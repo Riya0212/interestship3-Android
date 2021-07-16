@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="blue2">#407BFF</color>
-    <color name="blue3">#D4E2FF</color>
-    <color name="blue1">#022C88</color>
-    <color name="pink">#FFC3BD</color>
-<!--
-    <color name="teal_700">#FF018786</color>
--->
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFFFF</color>
 
+    <color name="colorBlue">#407BFF</color>
+    <color name="colorLight">#D4E2FF</color>
+    <color name="colorDarkBlue">#022C88</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorPink">#FFC3BD</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorPrimary">@color/blue_1</color>
+    <color name="colorPrimaryDark">@color/blue_1</color>
+    <color name="colorAccent">@color/blue_5</color>
+    <color name="colorGrey">#808080</color>
+    <color name="blue_1">#00101f</color>
+    <color name="blue_5">#0078ff</color>
+=======
+  
+ 
 
-  <color name="colorBlue">#407BFF</color>
-  <color name="colorLight">#D4E2FF</color>
-  <color name="colorDarkBlue">#022C88</color>
-  <color name="colorBlack">#000000</color>
-  <color name="colorPink">#FFC3BD</color>
-  <color name="colorWhite">#FFFFFFFF</color>
-  <color name="colorPrimary">@color/blue_1</color>
-  <color name="colorPrimaryDark">@color/blue_1</color>
-  <color name="colorAccent">@color/blue_5</color>
-  <color name="colorGrey">#808080</color>
-  <color name="blue_1">#00101f</color>
-  <color name="blue_5">#0078ff</color>
 </resources>
