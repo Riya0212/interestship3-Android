@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--dont use this activity-->
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,12 +10,27 @@
     android:layout_height="match_parent"
     tools:context=".userProfile">
 
+
+=======
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/id_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
         app:layout_constraintGuide_begin="@dimen/dp_20">
+
 
     </androidx.constraintlayout.widget.Guideline>
 
@@ -20,7 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/dp_150" />
+
+        app:layout_constraintGuide_percent="0.22" />
+
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -28,7 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
         app:layout_constraintGuide_end="@dimen/dp_20">
+
+        app:layout_constraintGuide_percent="0.95">
+
 
     </androidx.constraintlayout.widget.Guideline>
 
@@ -37,7 +62,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
         app:layout_constraintGuide_end="@dimen/dp_30">
+
+        app:layout_constraintGuide_percent="0.95">
+
 
     </androidx.constraintlayout.widget.Guideline>
 
@@ -53,7 +82,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
         app:layout_constraintGuide_begin="@dimen/dp_80">
+
+        app:layout_constraintGuide_percent="0.1">
+
 
     </androidx.constraintlayout.widget.Guideline>
 
@@ -62,19 +95,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
         app:layout_constraintGuide_begin="@dimen/dp_40" />
+=======
+        app:layout_constraintGuide_percent="0.1" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_outerin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
         app:layout_constraintGuide_end="@dimen/dp_40" />
+=======
+        app:layout_constraintGuide_percent="0.9" />
+
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageViewtop"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+
         android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="@id/guide_inner"
         app:layout_constraintTop_toBottomOf="@id/guide_top"
@@ -130,13 +172,12 @@
         app:layout_constraintTop_toBottomOf="@id/textName" />
 -->
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_ellipse_3"
         android:src="@drawable/ic_group_23"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintTop_toBottomOf="@id/textName" />
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewName"
@@ -148,155 +189,67 @@
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@+id/textName"
+
         tools:ignore="MissingConstraints,NotSibling" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:inputType="textPersonName"
-        android:padding="@dimen/sp_5"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sp_5"
+
         android:text="@string/label_phone_number"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/editTextName" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:inputType="phone"
-        android:padding="@dimen/sp_5"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/textViewPhone" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sp_5"
+
         android:text="@string/label_gender"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/editTextPhone" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextGender"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:inputType="text"
-        android:padding="@dimen/sp_5"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/textViewGender" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewBlood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sp_5"
+
         android:text="@string/label_blood_group"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/editTextGender" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextBlood"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:inputType="text"
-        android:padding="@dimen/sp_5"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/textViewBlood" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sp_5"
+
         android:text="@string/label_weight"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/editTextBlood" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextWeight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:inputType="text"
-        android:padding="@dimen/sp_5"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/textViewWeight" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/sp_5"
+
         android:text="@string/label_height"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/editTextWeight" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextHeight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_bg"
-        android:inputType="text"
-        android:padding="@dimen/sp_5"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toEndOf="@id/guide_outerin"
-        app:layout_constraintStart_toStartOf="@id/guide_outer"
-        app:layout_constraintTop_toBottomOf="@id/textViewHeight" />
-
-    <Button
-        android:id="@+id/btnok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/label_ok"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="639dp"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

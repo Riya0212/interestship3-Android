@@ -6,10 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/logo"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/id_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        android:layout_height="80dp"
+
         android:background="@drawable/ic_group_25logo"
         android:src="@drawable/ic_group_25logo"
         app:layout_constraintDimensionRatio="1:1"
@@ -111,7 +129,10 @@
         android:text="@string/label_email"
         android:textColor="@color/colorDarkBlue"
         android:textColorHighlight="@color/colorDarkBlue"
+
         android:textSize="@dimen/sp_20"
+
+
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewmess" />
@@ -124,7 +145,9 @@
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:boxStrokeWidth="0dp"
+
         app:boxStrokeWidthFocused="0dp"
+
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewEmail"
@@ -148,7 +171,9 @@
         android:text="@string/label_password"
         android:textColor="@color/colorDarkBlue"
         android:textColorHighlight="@color/colorDarkBlue"
+
         android:textSize="@dimen/sp_20"
+
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/emailLayout" />
@@ -160,7 +185,9 @@
         android:importantForAutofill="no"
         app:errorEnabled="true"
         app:boxStrokeWidth="0dp"
+
         app:boxStrokeWidthFocused="0dp"
+
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintStart_toStartOf="@id/guidelineouter"
         app:layout_constraintTop_toBottomOf="@id/textViewPassword"
@@ -169,7 +196,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
+
             android:inputType="textVisiblePassword"
             android:background="@drawable/input_bg"
             android:padding="@dimen/sp_2"
@@ -187,10 +216,34 @@
         android:text="@string/label_forgot_password"
         android:textColor="@color/colorBlue"
         android:textColorHighlight="@color/colorBlue"
+
         android:textSize="@dimen/sp_17"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
         app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
+
+
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+        app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
+    <!--
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/loginbtn_bg"
+            android:enabled="false"
+            android:text="@string/label_login"
+            android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/colorWhite"
+            android:textSize="@dimen/sp_18"
+            app:backgroundTint="@color/colorDarkBlue"
+            app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
+            app:layout_constraintStart_toStartOf="@id/guidelineouter"
+            app:layout_constraintTop_toBottomOf="@id/textViewForgot"/>
+    -->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
@@ -206,7 +259,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewForgot"
         app:layout_constraintStart_toStartOf="@id/guidelineleft"
         app:layout_constraintEnd_toEndOf="@id/guidelineright"/>
-
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textViewNewUser"

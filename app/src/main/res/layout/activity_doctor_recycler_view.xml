@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".DoctorRecyclerView">
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/blue3"
+
+    card_view:layout_constraintLeft_toLeftOf="parent"
+    card_view:layout_constraintTop_toTopOf="parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="4dp"
+    card_view:cardCornerRadius="3dp"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+android:paddingBottom="7dp"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10"
+    android:id="@+id/layoutChildDoctorCard"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelinecardstart"
+        android:orientation="vertical"
+        card_view:layout_constraintGuide_begin="@dimen/dp_5">
+
+    </androidx.constraintlayout.widget.Guideline>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        card_view:layout_constraintGuide_begin="@dimen/dp_10"
+        android:id="@+id/guidelinetopcard"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelinecardend"
+        android:orientation="vertical"
+        card_view:layout_constraintGuide_end="@dimen/dp_5">
+
+    </androidx.constraintlayout.widget.Guideline>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        card_view:layout_constraintGuide_end="@dimen/dp_5"
+        android:id="@+id/guidelinebottomcard"
+        android:layout_height="wrap_content">
+
+    </androidx.constraintlayout.widget.Guideline>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp_60"
+        card_view:layout_constraintStart_toStartOf="@+id/layoutChildDoctorCard"
+        card_view:layout_constraintEnd_toEndOf="@+id/layoutChildDoctorCard"
+        android:src="@drawable/download"
+        android:id="@+id/imgdoctorphoto"
+        card_view:civ_border_color="@color/blue2"
+        card_view:civ_border_width="@dimen/dp_3"
+        card_view:layout_constraintTop_toTopOf="@id/guidelinetopcard"
+        android:layout_height="@dimen/dp_60">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+    <com.google.android.material.textview.MaterialTextView
+        card_view:layout_constraintTop_toBottomOf="@+id/imgdoctorphoto"
+        card_view:layout_constraintStart_toStartOf="@id/guidelinecardstart"
+        android:text="@string/nameofdoctor"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinssemibold"
+        android:id="@+id/txtNameOfDoctor"
+        card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
+        android:textSize="@dimen/sp_12"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        card_view:layout_constraintStart_toStartOf="@id/guidelinecardstart"
+        card_view:layout_constraintTop_toBottomOf="@id/txtNameOfDoctor"
+        android:textSize="@dimen/sp_12"
+
+        android:paddingBottom="@dimen/dp_2"
+        android:textColor="@color/blue2"
+        card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
+        android:id="@+id/txtcategoryOfDoctor"
+        android:fontFamily="@font/poppinsregular"
+        android:text="@string/categoryofdoctor"
+        android:textAlignment="center"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:text="@string/bookAppointment"
+        android:backgroundTint="@color/blue2"
+android:textColor="@color/white"
+        android:fontFamily="@font/poppinssemibold"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_corner_button"
+        android:textSize="@dimen/sp_12"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        card_view:layout_constraintBottom_toTopOf="@id/guidelinebottomcard"
+        card_view:layout_constraintTop_toBottomOf="@+id/txtcategoryOfDoctor"
+        card_view:layout_constraintStart_toStartOf="@id/guidelinecardstart"
+        card_view:layout_constraintEnd_toEndOf="@id/guidelinecardend"
+        android:layout_marginTop="@dimen/dp_7"
+        android:id="@+id/btn_book_homescreen"
+        android:layout_height="@dimen/dp_30">
+
+    </androidx.appcompat.widget.AppCompatButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

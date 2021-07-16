@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".DoctorDetail">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/id_login"
+        app:tint="@color/blue1"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:id="@+id/topcontainer"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_400"
+        android:translationY="-250dp"
+        android:src="@drawable/rectangle"
+        android:alpha="0.6"
+        android:id="@+id/img_background"
+        android:translationZ="-1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/backgroundimage">
+
+    </ImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:elevation="@dimen/dp_4"
+        android:src="@drawable/ellipsesampleimage2"
+        app:civ_border_color="@color/blue2"
+        app:civ_border_width="@dimen/dp_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/container"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+<com.google.android.material.textview.MaterialTextView
+    android:layout_width="wrap_content"
+    android:text="@string/dr_hrishita_mavani_doctor_name"
+    android:fontFamily="@font/poppinsbold"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:textSize="@dimen/sp_14"
+    android:id="@+id/txt_doctorName"
+    app:layout_constraintBottom_toTopOf="@id/ratingbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/img_user_profile"
+    android:layout_height="wrap_content">
+
+</com.google.android.material.textview.MaterialTextView>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:outlineSpotShadowColor="@color/black"
+        android:numStars="5"
+        android:isIndicator="true"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:rating="3.4"
+        android:id="@+id/ratingbar"
+        android:translationY="-15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_doctorName"
+        android:layout_height="wrap_content">
+
+    </RatingBar>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ratingbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="normal"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:textSize="@dimen/sp_12"
+        android:text="Reviews"
+        android:translationY="-30dp"
+        android:textColor="@color/blue1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/viewfeedbacklink"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.textview.MaterialTextView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dp_0"
+        android:id="@+id/container"
+        app:layout_constraintStart_toStartOf="parent"
+        android:translationY="-20dp"
+        android:padding="@dimen/dp_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewfeedbacklink"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/guideline_top"
+            app:layout_constraintGuide_begin="@dimen/dp_5"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.Guideline>
+     <!--   <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/guideline_bottom"
+            app:layout_constraintGuide_end="@dimen/dp_20"
+            android:layout_height="wrap_content">-->
+
+        <!--</androidx.constraintlayout.widget.Guideline>-->
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/guideline_start"
+            app:layout_constraintGuide_begin="@dimen/dp_15"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.Guideline>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/guideline_end"
+            app:layout_constraintGuide_end="@dimen/dp_15"
+            android:layout_height="wrap_content">
+
+        </androidx.constraintlayout.widget.Guideline>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/dp_0"
+            app:layout_constraintTop_toTopOf="@id/guideline_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/guideline_end"
+            android:elevation="@dimen/dp_4"
+            android:backgroundTint="@color/blue3"
+            app:cardCornerRadius="@dimen/dp_20"
+            android:id="@+id/parent_card_details_doctor"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/innerContainer"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/introduction"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintEnd_toEndOf="@id/innerContainer"
+                    app:layout_constraintTop_toTopOf="@id/innerContainer"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    android:id="@+id/txt_doctorIntroTitle"
+                    android:textColor="@color/blue2"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_doctorIntroDetails"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    app:layout_constraintEnd_toEndOf="@id/innerContainer"
+                    android:text="I am doctor Hrishita. I am an orthopedic."
+                  app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroTitle"
+                    app:layout_constraintBottom_toTopOf="@id/txt_doctorqualificationTitle"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="@dimen/sp_10"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:text="Qualification"
+                    android:layout_marginTop="@dimen/dp_5"
+
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintEnd_toEndOf="@id/innerContainer"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroDetails"
+                    app:layout_constraintBottom_toTopOf="@id/txt_doctorqualificationDetails"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    android:id="@+id/txt_doctorqualificationTitle"
+                    android:textColor="@color/blue2"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_doctorqualificationDetails"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    app:layout_constraintEnd_toEndOf="@id/innerContainer"
+                    android:text="Orthopedic"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorIntroDetails"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_doctorExperienceTitle"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="@dimen/sp_10"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/years_of_experience"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorqualificationDetails"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    android:id="@+id/txt_doctorExperienceTitle"
+                    android:textColor="@color/blue2"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/experience_detail"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_0"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_doctorExperienceTitle"
+                    app:layout_constraintStart_toStartOf="@id/innerContainer"
+                    android:id="@+id/txt_doctorExperienceDetail"
+                    android:textColor="@color/blue1"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintTop_toBottomOf="@id/topcontainer"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        app:maxImageSize="@dimen/dp_30"
+        app:rippleColor="@color/blue1"
+        app:borderWidth="@dimen/dp_0"
+        android:outlineAmbientShadowColor="@color/blue3"
+        android:outlineSpotShadowColor="@color/blue3"
+        app:tint="@color/white"
+        android:id="@+id/floating_appointent"
+        app:layout_constraintVertical_bias="0.2"
+        android:backgroundTint="@color/blue2"
+       android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/bookAppointment">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

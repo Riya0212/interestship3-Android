@@ -81,6 +81,94 @@
 
     </com.google.android.material.textview.MaterialTextView>
     <androidx.constraintlayout.widget.ConstraintLayout
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/id_login"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_inner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dp_150" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/dp_30">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_imgstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dp_80">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewtop"
+            android:layout_width="wrap_content"
+            android:translationZ="-1dp"
+            android:alpha="0.4"
+            android:layout_height="0dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="@id/guide_inner"
+            app:layout_constraintTop_toBottomOf="@id/guide_top"
+            tools:ignore="MissingConstraints" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageWomen"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ellipsesampleimage2"
+            app:civ_border_color="@color/colorBlue"
+            app:civ_border_width="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guide_imgstart"
+            tools:ignore="MissingConstraints" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:text="@string/label_dr_riya_patel"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_17"
+            android:id="@+id/txt_doctorName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageWomen"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+
             android:id="@+id/innerLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -146,8 +234,13 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_doctorreason"
             android:layout_width="0dp"
+
             android:layout_height="@dimen/dp_140"
             android:text="@string/label_dummy_intro"
+
+            android:layout_height="wrap_content"
+            android:text="Fever with cold"
+
             android:textColor="@color/colorBlack"
             android:fontFamily="@font/poppinsregular"
             android:textSize="13sp"
@@ -175,6 +268,7 @@
             android:layout_height="wrap_content">
         </com.google.android.material.textview.MaterialTextView>
 
+
     <RatingBar
         android:id="@+id/ratingbar"
         android:layout_width="wrap_content"
@@ -188,6 +282,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_doctorFeedbackTitle"
         tools:targetApi="p" />
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:outlineSpotShadowColor="@color/colorBlack"
+            android:rating="4"
+            android:saveEnabled="true"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_doctorFeedbackTitle"
+            tools:targetApi="p" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -212,6 +320,8 @@
 
 
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>
 
