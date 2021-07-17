@@ -1,31 +1,22 @@
 package com.wecure.patient
 
-
-import android.annotation.SuppressLint
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.editTextEmail
-import kotlinx.android.synthetic.main.activity_main.editTextPassword
 
-
-
-class MainActivity : AppCompatActivity() {
+class DoctorLogin : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     lateinit var signInInputsArray: Array<EditText>
-
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide() //hide actionbar
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_doctor_login)
         auth = Firebase.auth
 
 
@@ -34,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         textViewSignup.setOnClickListener {
 
-            startActivity(Intent(this,RegistrationActivity::class.java))
+            startActivity(Intent(this,DoctorRegistration::class.java))
             finish()
         }
         btnLogin.setOnClickListener {
@@ -47,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
     private fun doLogin() {
         if(editTextEmail.text.toString().isEmpty() || editTextPassword.text.toString().isEmpty()) {
             signInInputsArray.forEach { input ->
@@ -90,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         if(currentUser !=null) {
             if (currentUser.isEmailVerified) {
-                startActivity(Intent(this, userProfile::class.java))
+                startActivity(Intent(this, HomeScreen_Doctor::class.java))
                 finish()
             } else {
 
@@ -100,17 +90,13 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
         }
-            else{
-                Toast.makeText(
-                    baseContext, "Invalid email or password.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+        else{
+            Toast.makeText(
+                baseContext, "Invalid email or password.",
+                Toast.LENGTH_SHORT
+            ).show()
         }
-
     }
 
 
-
-
-
+}

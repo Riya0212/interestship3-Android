@@ -14,7 +14,7 @@ import com.wecure.patient.databinding.ActivityForgetPasswordBinding
 import kotlinx.android.synthetic.main.activity_forget_password.*
 
 
-class forgetPassword_activity : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var userEmail:String
     private lateinit var binding: ActivityForgetPasswordBinding

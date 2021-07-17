@@ -29,13 +29,17 @@ class RegistrationActivity : AppCompatActivity() {
             arrayOf(editTextName, editTextPhone, editTextEmail, editTextPassword)
         auth = Firebase.auth
 
-       // val bundle = intent.extras
-       // catSelected = bundle!!.getString(getString(R.string.bundle_category))
+        // val bundle = intent.extras
+        //catSelected = bundle!!.getString(getString(R.string.bundle_category))
 
         btnSignup.setOnClickListener {
             signUpUser()
         }
         textViewLogin.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
+        id_login.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }
@@ -79,10 +83,10 @@ class RegistrationActivity : AppCompatActivity() {
 
             }
         }
-       if(!FieldValidators.isValidEmail(editTextEmail.text.toString())) {
-           editTextEmail.error = "Invalid Email!"
-           editTextEmail.requestFocus()
-       }
+        if(!FieldValidators.isValidEmail(editTextEmail.text.toString())) {
+            editTextEmail.error = "Invalid Email!"
+            editTextEmail.requestFocus()
+        }
         if(editTextPhone.text.toString().length>10) {
             editTextPhone.error = "Number cannot be greater than 10 digits"
             editTextPhone.requestFocus()
@@ -108,7 +112,6 @@ class RegistrationActivity : AppCompatActivity() {
             return
         }
         saveFirestore(userName,userPhone,userEmail,userPassword)
-
         auth.createUserWithEmailAndPassword(editTextEmail.text.toString(), editTextPassword.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -125,7 +128,7 @@ class RegistrationActivity : AppCompatActivity() {
                                 finish()
                             }
                         }
-                    }
+                }
 
                 else {
                     Toast.makeText(baseContext, "Signup failed.Try Again",
@@ -137,5 +140,5 @@ class RegistrationActivity : AppCompatActivity() {
 
 
     }
-        }
+}
 

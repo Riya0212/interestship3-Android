@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".RegistrationActivity">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-=======
-    tools:context=".registrationActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -21,7 +14,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/ic_baseline_arrow_back_24"
         android:layout_margin="@dimen/dp_10"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription">
 
     </ImageView>
     <com.google.android.material.imageview.ShapeableImageView
@@ -335,12 +329,7 @@
 
         tools:ignore="RtlSymmetry" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageBottom1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
 
-         />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageBottom1"

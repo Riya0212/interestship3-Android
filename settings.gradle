@@ -1,6 +1,4 @@
 
-rootProject.name = "weCureLoginActivity"
-=======
 rootProject.name = "WecureDoctor"
 
 include ':app'

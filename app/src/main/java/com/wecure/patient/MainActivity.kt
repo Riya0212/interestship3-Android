@@ -5,10 +5,7 @@ package com.wecure.patient
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
-import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,9 +16,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
-import com.wecure.patient.FieldValidators.isValidEmail
-import com.wecure.patient.data.UserInfoData
-import com.wecure.patient.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -66,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             }
             else
             {
-                val intent = Intent(this, registrationActivity::class.java)
+                val intent = Intent(this, RegistrationActivity::class.java)
                 intent.putExtras(bundle)
                 startActivity(intent)
                 finish()
@@ -83,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             doLogin()
         }
         textViewForgot.setOnClickListener{
-            val intent= Intent(this,forgetPassword_activity::class.java)
+            val intent= Intent(this,ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 
@@ -138,21 +132,17 @@ class MainActivity : AppCompatActivity() {
                 mFirebaseDatabase!!.child(userId.toString()).get().addOnCompleteListener(
                     OnCompleteListener {
                         if (it.isSuccessful){
-                         Log.v("values ",it.result?.value.toString())
-                             val hashMap: HashMap<String,String> = it.result?.value as HashMap<String, String>
-                            if (hashMap.get("category").equals("doctor"))
-                            {
+                             //val hashMap: HashMap<String,Any?> = it.result?.value
+                           // if (hashMap.get("category").equals("doctor"))
+                           // {
                                 startActivity(Intent(this, HomeScreen_Doctor::class.java))
                                 finish()
-                            }
-                            else
-                            {
+                           // }
+
+
                                 startActivity(Intent(this, HomeScreen::class.java))
                                 finish()
                             }
-
-
-                        }
                         else{
                             it.exception?.printStackTrace()
                         }

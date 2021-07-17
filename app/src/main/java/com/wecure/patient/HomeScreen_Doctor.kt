@@ -1,5 +1,6 @@
 package com.wecure.patient
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -33,15 +34,16 @@ class HomeScreen_Doctor : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard
+                R.id.navigation_home_doctor, R.id.navigation_dashboard_doctor
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         navView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.navigation_home -> makecurrentfragment(homefragment_doctor)
-                R.id.navigation_profile -> makecurrentfragment(profilefragment_doctor)
+                R.id.navigation_home_doctor -> makecurrentfragment(homefragment_doctor)
+                R.id.navigation_profile -> startActivity(Intent(this,DocProfileActivity::class.java))
+               // R.id.navigation_profile -> makecurrentfragment(profilefragment_doctor)
             }
             true
         }

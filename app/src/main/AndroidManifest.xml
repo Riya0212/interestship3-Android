@@ -1,52 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wecure.patient">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
-    package="com.wecure.patient">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <application
         android:allowBackup="true"
-
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.WeCureLoginActivity"
         tools:ignore="AllowBackup">
-        <activity android:name="PatientHistoryActivity" />
+        <activity android:name=".DocProfileActivity"></activity>
+        <activity android:name=".DoctorLogin" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".PatientHistoryActivity" />
         <activity android:name=".UpdatePasswordActivity" />
         <activity android:name=".BookAgain" />
-        <activity android:name=".userProfile" />
         <activity android:name=".ForgotPasswordActivity" />
-        <activity android:name=".MainActivity">
-
-        android:theme="@style/Theme.WecureDoctor">
-        <activity android:name=".DoctorRegistration"></activity>
-        <activity android:name=".BookAgain" />
+        <activity android:name=".DoctorRegistration" />
         <activity android:name=".SelectCategory" />
         <activity android:name=".feedback_recycler_view" />
         <activity android:name=".Feedback" />
         <activity android:name=".SplashScreen">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".RegistrationActivity" />
-
         <activity android:name=".activity.AppointmentActivity" />
         <activity android:name=".DoctorDetail" />
         <activity android:name=".ContactUs" />
@@ -55,14 +40,10 @@
         <activity
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen" />
-        <activity android:name=".userProfile" />
-        <activity android:name=".forgetPassword_activity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".registrationActivity" />
         <activity android:name=".HomeScreen_Doctor" />
         <activity android:name=".HistoryDoctorRecyclerView" />
         <activity android:name=".AppointmentDetail" />
-
     </application>
 
 </manifest>

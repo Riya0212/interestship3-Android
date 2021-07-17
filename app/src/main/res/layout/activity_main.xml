@@ -7,10 +7,7 @@
     tools:context=".MainActivity">
 
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/logo"
-        android:layout_width="@dimen/dp_100"
-        android:layout_height="@dimen/dp_100"
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -19,7 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/ic_baseline_arrow_back_24"
         android:layout_margin="@dimen/dp_10"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription">
 
     </ImageView>
     <com.google.android.material.imageview.ShapeableImageView
@@ -223,10 +221,6 @@
         app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
 
 
-        android:textSize="@dimen/sp_14"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/guidelineouterin"
-        app:layout_constraintTop_toBottomOf="@id/passwordLayout" />
     <!--
         <Button
             android:id="@+id/btnLogin"

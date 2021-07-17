@@ -1,5 +1,6 @@
 package com.wecure.patient
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -36,12 +37,14 @@ class HomeScreen : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_dashboard
             )
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         navView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.navigation_home -> makecurrentfragment(homefragment)
-                R.id.navigation_profile -> makecurrentfragment(proflefragment)
+                R.id.navigation_profile -> startActivity(Intent(this,ProfileActivity::class.java))
+               // R.id.navigation_profile -> makecurrentfragment(proflefragment)
             }
             true
         }

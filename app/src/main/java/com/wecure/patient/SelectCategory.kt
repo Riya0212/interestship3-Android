@@ -26,7 +26,8 @@ class SelectCategory : AppCompatActivity() {
             img_patient.setCircleBackgroundColorResource(R.color.blue3)
             img_doctor.setCircleBackgroundColorResource(R.color.pink)
             catSelected="doctor"
-
+            startActivity(Intent(this,DoctorLogin::class.java))
+            finish()
             flag=true
         }
         img_patient.setOnClickListener {
